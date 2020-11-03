@@ -1,0 +1,37 @@
+body {
+    color: rgb(51, 37, 17);
+	background-color: rgb(255, 191, 71);
+	background: url("1_background.jpg") no-repeat center center;
+	background-size: cover;
+	display: flex;
+	height: 150vh;
+}
+
+#box {
+	
+    align-items: center !important;
+	text-align: center !important;
+	font-size: large !important;
+	font-weight: bold !important;
+    
+    
+	
+    color: rgb(51, 37, 17) !important;
+    background-color: rgba(255, 191, 71, 0.5) !important;
+}
+
+#login {
+	background-color: rgba(255, 191, 71, 0.1) !important;
+	
+}
+
+input {
+	width: 200px !important;
+	display: inline-block !important;
+}
+
+.next {
+	font-weight: bold !important;
+	color: rgb(51, 37, 17) !important;
+	font-size: large;
+}

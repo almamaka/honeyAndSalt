@@ -1,0 +1,90 @@
+body {
+
+    /*background-color: rgb(245, 192, 124);*/
+    background-color: rgb(211, 135, 100);
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px rgb(191, 155, 94);
+
+}
+
+.navbar{
+
+    background: transparent !important;
+    font-weight: bold !important;
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 3px 3px rgb(61, 50, 30) !important;
+}
+
+#btn {
+
+    padding: 6px 60px !important;
+
+}
+
+.bg{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url("1_background.jpg") no-repeat center center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    /*background-color: rgba(255, 191, 71, 0.7) !important;*/
+    background-color: rgb(185, 103, 78) !important;
+    text-shadow: 3px 3px rgb(191, 155, 94) !important;
+    font-weight: bold;
+}
+
+#leadbox {
+
+    background-color: rgba(255, 191, 71, 0.4) !important;
+
+}
+
+#go {
+
+    color: rgb(53, 19, 105);
+
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+.scrolled{
+
+    background: rgb(170, 62, 48) !important;
+    transition: 1.5s linear !important;
+}
+
+h1 {
+    font-weight: bold !important; 
+    text-shadow: 6px 6px rgb(191, 155, 94);
+
+}
+
+hr {
+
+    border-top: 3px dotted rgb(53, 19, 105);
+
+}
+
+
+h3{
+
+    cursor: pointer;
+    text-shadow: 3px 3px rgb(191, 155, 94);
+
+}
+
+#contact {
+    display: flex;
+    align-items: center !important;
+    text-align: center !important;
+    background: url("1_background.jpg") no-repeat center center !important;
+    background-size: cover !important;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 191, 71, 0.7) !important;
+    text-shadow: 3px 3px rgb(191, 155, 94) !important;
+    font-weight: bold;
+}
