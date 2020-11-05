@@ -34,7 +34,8 @@
 					</div>
 				</div>
 			
-			<a href="mainpage" class="next">Vagy lépj tovább a receptböngészőbe...</a>  
+				<a href="registration" class="next">Regisztrálj!<br></a>
+				<a href="mainpage" class="next">Vagy lépj tovább a receptböngészőbe...</a>  
 		</div>
 		
 	

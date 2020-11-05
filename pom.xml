@@ -12,7 +12,7 @@
 	<artifactId>honeyAndSalt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>honeyAndSalt</name>
-	<description>Honey and SAlt - The Recipe Searching app in spring</description>
+	<description>Salt and Honey - The Recipe Searching app in spring</description>
 
 	<properties>
 		<java.version>1.8</java.version>
