@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,26 +21,14 @@
 	<br/>
 		<div class="container-fluid my-4 mx-3">
 				<div class="row justify-content-center border rounded" id="box">
-					<div class="col-12">
-					<br>
-					<h3 class="p2">Kedves receptböngésző! Kérlek, jelentkezz be!</h3>
-					<form action="/" method="post" class="form-group text-center py-2 rounded ${error != null ? 'has-error' : ''}" id="login">
-							<span>${ message}</span>
-							<label for="">Felhasználónév</label>
-							<input type="text" id="username" class="form-control pt-3 pb-3 mx-2"/>
-						
-							<label for="">Jelszó</label>
-							<input type="password" id="pwd" class="form-control pt-3 pb-3 mx-2"/>
-							<span>${ error}</span>
-							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-						
-						<button type="submit" class="btn btn-dark" id="btn">Bejelentkezés</button>
-					</form>
-					</div>
-				</div>
-			
-				<a href="registration" class="next">Regisztrálj!<br></a>
-				<a href="mainpage" class="next">Vagy lépj tovább a receptböngészőbe...</a>  
+                    <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
+
+                    <h2>Üdvözöllek ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Kijelentkezés</a></h2>
+                    </c:if>
+                </div>
 		</div>
 		
 	

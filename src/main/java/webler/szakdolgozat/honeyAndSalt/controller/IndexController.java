@@ -1,4 +1,4 @@
-package webler.szakdolgozat.honeyAndSalt.controller;
+/*package webler.szakdolgozat.honeyAndSalt.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,5 +16,5 @@ public class IndexController {
 	}
 	
 	
-}
+}*/
 
