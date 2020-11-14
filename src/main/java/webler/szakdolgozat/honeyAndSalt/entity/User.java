@@ -13,6 +13,8 @@ public class User {
     private String username;
 
     private String password;
+    
+    private String email;
 
     @Transient
     private String passwordConfirm;
@@ -52,7 +54,15 @@ public class User {
         this.passwordConfirm = passwordConfirm;
     }
 
-    public Set<Role> getRoles() {
+    public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Set<Role> getRoles() {
         return roles;
     }
 

@@ -19,36 +19,46 @@
 
   <body>
 
-    <div class="container">
+    <div class="container-fluid my-4 mx-3">
+        <div class="row justify-content-center border rounded" id="box">
+            <div class="col-12">
+                <h2 class="form-signin-heading">Hozd létre a felhasználód!</h2>
+                <form:form method="POST" modelAttribute="userForm" class="form-signin">
+                    <spring:bind path="username">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="text" path="username" class="form-control" placeholder="Felhasználónév"
+                                        autofocus="true"></form:input>
+                            <form:errors path="username"></form:errors>
+                        </div>
+                    </spring:bind>
 
-        <form:form method="POST" modelAttribute="userForm" class="form-signin">
-            <h2 class="form-signin-heading">Hozd létre a felhasználód!</h2>
-            <spring:bind path="username">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true"></form:input>
-                    <form:errors path="username"></form:errors>
-                </div>
-            </spring:bind>
+                    <spring:bind path="password">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="password" path="password" class="form-control" placeholder="Jelszó"></form:input>
+                            <form:errors path="password"></form:errors>
+                        </div>
+                    </spring:bind>
 
-            <spring:bind path="password">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
-                    <form:errors path="password"></form:errors>
-                </div>
-            </spring:bind>
+                    <spring:bind path="passwordConfirm">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="password" path="passwordConfirm" class="form-control"
+                                        placeholder="Jelszó megerősítése"></form:input>
+                            <form:errors path="passwordConfirm"></form:errors>
+                        </div>
+                    </spring:bind>
 
-            <spring:bind path="passwordConfirm">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="password" path="passwordConfirm" class="form-control"
-                                placeholder="Confirm your password"></form:input>
-                    <form:errors path="passwordConfirm"></form:errors>
-                </div>
-            </spring:bind>
+                    <spring:bind path="email">
+                        <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <form:input type="email" path="email" class="form-control"
+                                        placeholder="E-mail cím"></form:input>
+                            <form:errors path="email"></form:errors>
+                        </div>
+                    </spring:bind>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Regisztráció</button>
-        </form:form>
-
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Regisztráció</button>
+                </form:form>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
