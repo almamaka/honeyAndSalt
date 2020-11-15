@@ -103,7 +103,7 @@
 
               <div class="col-12  mt-4">
                   <a name="account"></a>
-                  <h3 id="title3">Fegyverek</h3>
+                  <h3 id="title3">lol</h3>
                   <hr>
                   <div id="fegyver_leiras">
                       <div class="row">
@@ -129,7 +129,6 @@
           </div>
       </container>
   </section>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
