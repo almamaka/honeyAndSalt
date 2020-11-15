@@ -8,7 +8,7 @@
 <meta name="Description" content="Ez egy receptböngésző, személyre szabva"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="stylesheet" type="text/css"  href="/css/mainstyle.css">
+<link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
 <title>Salt And Honey - Főoldal</title>
 </head>
 <body id="body">
@@ -48,7 +48,6 @@
 
     <section class="mt-5">
       <div class="container" id="bigbox">
-        <a href="listrecipes" class="next" integrity="">Összes recept<br></a>
         <a name="search"></a>
         <br>
         <br>
@@ -60,58 +59,34 @@
               <div class="p-3 md-form mt-0">
                 <input class="form-control" type="text" placeholder="Böngéssz..." aria-label="Search">
               </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Gluténmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Cukormentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Tejmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Laktózmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Alkoholmentes
-                </label>
-              </div>
+              <h1>Összes recept</h1>
 
-              <div class="col-12 mt-4">
-                  <a name="favourite"></a>
-                  <h3 id="title2">Kedvenc receptjeim</h3>
-                  <hr>
-                  <div id="helyszinek_leiras">
-                      <div class="row">
-                          
-                      </div>
-                  </div>
-              </div>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Recept neve</th>
+			<th>Előkészítési idő</th>
+			<th>Elkészítési idő</th>
+			<th>Elkészítés</th>
+			<th>Műveletek</th>
+		</tr>
+		<c:forEach var="recipe" items="${recipes}">
+		<tr>
+			<td>${recipe.id }</td>
+			<td>${recipe.name }</td>
+			<td>${recipe.prepTime }</td>
+			<td>${recipe.cookTime }</td>
+			<td>${recipe.instructions }</td>
 
-              <div class="col-12  mt-4">
-                  <a name="account"></a>
-                  <h3 id="title3">lol</h3>
-                  <hr>
-                  <div id="fegyver_leiras">
-                      <div class="row">
-                          
-                      </div>
-                  </div>
-              </div>
+			<td>
+				<a href="/edit/${recipe.id }">Módosítás</a> | <a href="/del/${recipe.id }">Törlés</a>
+			</td>
+		</tr>
+		</c:forEach>
+	</table>
+	<br>
+	<a href="/newrecipe">Új recept rögzítése</a>
+
           </div>
       </div>
   </section>

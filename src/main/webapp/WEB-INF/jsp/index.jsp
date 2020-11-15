@@ -11,7 +11,7 @@
 	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-	<link rel="stylesheet" href="/css/style.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="/css/indexstyle.css">
 	<title>Salt And Honey - A hűtőtől a receptkönyvig</title>
 </head>
   <body>
@@ -38,6 +38,7 @@
 				</div>
 			
 				<a href="registration" class="next" integrity="">Regisztrálj!<br></a>
+				<a href="listrecipes" class="next" integrity="">Összes recept<br></a>
 				<a href="mainpage" class="next" integrity="">Vagy lépj tovább a receptböngészőbe...</a>  
 		</div>
 		
