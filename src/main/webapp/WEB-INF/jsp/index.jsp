@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,28 +22,28 @@
 					<div class="col-12">
 					<br>
 					<h3 class="p2">Kedves receptböngésző! Kérlek, jelentkezz be!</h3>
-					<form action="" method="post" class="form-group text-center py-2 rounded" id="login">
-						
+					<form action="/" method="post" class="form-group text-center py-2 rounded ${error != null ? 'has-error' : ''}" id="login">
+							<span>${ message}</span>
 							<label for="">Felhasználónév</label>
-							<input type="text" id="username" class="form-control pt-3 pb-3 mx-2">
+							<input type="text" id="username" class="form-control pt-3 pb-3 mx-2"/>
 						
 							<label for="">Jelszó</label>
-							<input type="password" id="pwd" class="form-control pt-3 pb-3 mx-2">
+							<input type="password" id="pwd" class="form-control pt-3 pb-3 mx-2"/>
+							<span>${ error}</span>
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 						
-						<button type="submit" class="btn btn-dark" id="btn">Bejelentkezés</button>
+						<button type="submit" class="btn btn-dark" id="btn" integrity="">Bejelentkezés</button>
 					</form>
 					</div>
 				</div>
 			
-				<a href="registration" class="next">Regisztrálj!<br></a>
-				<a href="mainpage" class="next">Vagy lépj tovább a receptböngészőbe...</a>  
+				<a href="registration" class="next" integrity="">Regisztrálj!<br></a>
+				<a href="mainpage" class="next" integrity="">Vagy lépj tovább a receptböngészőbe...</a>  
 		</div>
 		
-	
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="/js/main.js" type="text/javascript"></script>
   </body>
 </html>
