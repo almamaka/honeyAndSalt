@@ -5,18 +5,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-//import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
+import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
 
 @Controller
 public class RecipeSearchController {
 	
-//	@Autowired
-//	private HoneyAndSaltService honeyAndSaltService;
+	@Autowired
+	private HoneyAndSaltService honeyAndSaltService;
 	
 	@GetMapping("/mainpage")
 	public String recipeSearch(Model model) {
 		
 		//model.addAttribute("search", honeyAndSaltService.getAll());
 		return "mainpage";
+	}
+	
+	@GetMapping("/listrecipes")
+	public String listRecipes(Model model) {
+		
+		model.addAttribute("recipes", honeyAndSaltService.getAll());
+		return "listrecipes";
 	}
 }

@@ -13,7 +13,7 @@
         <meta name="Description" content="Ez egy receptböngésző, személyre szabva"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/indexstyle.css">
         <title>Salt And Honey - Regisztráció</title>
 
   </head>
