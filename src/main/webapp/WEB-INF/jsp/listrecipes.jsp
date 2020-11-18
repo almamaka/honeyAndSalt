@@ -1,3 +1,4 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,11 +78,12 @@
 			<td>${recipe.prepTime }</td>
 			<td>${recipe.cookTime }</td>
 			<td>${recipe.instructions }</td>
-
 			<td>
 				<a href="/edit/${recipe.id }">Módosítás</a> | <a href="/del/${recipe.id }">Törlés</a>
 			</td>
 		</tr>
+	
+			<h2>${recipe}</h2>
 		</c:forEach>
 	</table>
 	<br>
@@ -89,21 +91,22 @@
 
           </div>
       </div>
+      </div>
   </section>
 
   <hr>
   <section id="contact">
-      <container class="justify-content-center">
+      <div class="container justify-content-center">
           <div class="text-center">
               <br>
-              <h3>Elérhetőségem:</h4>
+              <h3>Elérhetőségem:</h3>
               <ul>
                   <li>Telefonszám: +3640444333</li>
                   <li>E-mail: acforthelife@kukac.hu</li>
               </ul>
               <br>
           </div>
-      </container>
+      </div>
   </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
