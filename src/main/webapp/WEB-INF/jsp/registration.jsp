@@ -23,7 +23,7 @@
     <div class="container-fluid my-4 mx-3">
         <div class="row justify-content-center border rounded" id="box">
             <div class="col-md-12">
-                <h3 class="p2">Hozd létre a felhasználód!</h2>
+                <h3 class="p2">Hozd létre a felhasználód!</h3>
                 <form:form method="POST" modelAttribute="userForm" class="form-group text-center py-2 rounded">
                     
                         <spring:bind path="username">

@@ -114,21 +114,22 @@
               </div>
           </div>
       </div>
+      </div>
   </section>
 
   <hr>
   <section id="contact">
-      <container class="justify-content-center">
+      <div class="container justify-content-center">
           <div class="text-center">
               <br>
-              <h3>Elérhetőségem:</h4>
+              <h3>Elérhetőségem:</h3>
               <ul>
                   <li>Telefonszám: +3640444333</li>
                   <li>E-mail: acforthelife@kukac.hu</li>
               </ul>
               <br>
           </div>
-      </container>
+      </div>
   </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
