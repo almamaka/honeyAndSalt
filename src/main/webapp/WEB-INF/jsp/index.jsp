@@ -25,10 +25,10 @@
 					<form action="/" method="post" class="form-group text-center py-2 rounded ${error != null ? 'has-error' : ''}" id="login">
 							<span>${ message}</span>
 							<label for="">Felhasználónév</label>
-							<input type="text" id="username" class="form-control pt-3 pb-3 mx-2"/>
+							<input type="text" name="username" id="username" class="form-control pt-3 pb-3 mx-2"/>
 						
 							<label for="">Jelszó</label>
-							<input type="password" id="pwd" class="form-control pt-3 pb-3 mx-2"/>
+							<input type="password" name="password" id="pwd" class="form-control pt-3 pb-3 mx-2"/>
 							<span>${ error}</span>
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 						

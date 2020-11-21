@@ -37,6 +37,7 @@ public class HoneyAndSaltSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .formLogin()
                 .loginPage("/")
+                .defaultSuccessUrl("/welcome", true)
                 .permitAll()
                 .and()
             .logout()
