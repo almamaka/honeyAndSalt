@@ -58,7 +58,7 @@
             <div class="col-12 mt-1">
               
               <div class="p-3 md-form mt-0">
-                <input class="form-control" type="text" placeholder="Böngéssz..." aria-label="Search">
+                <input class="form-control" type="text" name="searchText" placeholder="Böngéssz..." aria-label="Search">
               </div>
               <div class="col-2 form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
