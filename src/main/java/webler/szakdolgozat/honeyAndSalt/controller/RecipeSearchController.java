@@ -18,34 +18,24 @@ public class RecipeSearchController {
 	
 	@Autowired
 	private HoneyAndSaltService honeyAndSaltService;
+	
+	@Autowired
 	private SearchService searchService;
 	
 	@GetMapping("/mainpage")
 	public String recipeMain(Model model) {
-		
-		//model.addAttribute("search", honeyAndSaltService.getAll());
 		return "mainpage";
 	}
 	
 	@PostMapping("/search")
-	public ModelAndView recipeSearch(String searchText) {
-		ModelAndView model = new ModelAndView("search");
+	public ModelAndView recipeSearch(ModelAndView model, String searchText) {
 		List<Recipe> results = searchService.searchRecipeInstructionsContains(searchText);
 		model.addObject("search", results);
 		return model;
 	}
-//	
-//	@PostMapping("/mainpage")
-//	public String recipeSearch(Model model, String searchText) {
-//		List<Recipe> results = searchService.searchRecipeInstructionsContains(searchText);
-//		model.addAttribute("searchResults", results);
-//		return "redirect:/search";
-//	
-//	
+
 	@GetMapping("/search")
 	public String searchRecipes(Model model) {
-//		List<Recipe> results = searchService.searchRecipeInstructionsContains("komment");
-//		model.addAttribute("search", results);
 		return "search";
 	}
 	

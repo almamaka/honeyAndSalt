@@ -49,7 +49,6 @@
 
     <section class="mt-5">
       <div class="container" id="bigbox">
-        <a name="search"></a>
         <br>
         <br>
           <h2 class="text-left display-5 mx-1">Receptböngésző</h2>
@@ -63,13 +62,14 @@
               <h1>Összes recept</h1>
 
 	<table border="1">
+	<caption></caption>
 		<tr>
-			<th>ID</th>
-			<th>Recept neve</th>
-			<th>Előkészítési idő</th>
-			<th>Elkészítési idő</th>
-			<th>Elkészítés</th>
-			<th>Műveletek</th>
+			<th id="id">ID</th>
+			<th id="recipeName">Recept neve</th>
+			<th id="recipePreptime">Előkészítési idő</th>
+			<th id="recipeCooktime">Elkészítési idő</th>
+			<th id="recipeInstructions">Elkészítés</th>
+			<th id="actions">Műveletek</th>
 		</tr>
 		<c:forEach var="recipe" items="${recipes}">
 		<tr>

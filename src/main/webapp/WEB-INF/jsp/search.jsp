@@ -15,7 +15,7 @@
 <body id="body">
 <p>Lol</p>
 		<c:forEach var="searchResults" items="${search}">
-		<p>${searchResults.name}</p>
+		<p>${searchResults}</p>
 	
 		</c:forEach>
 
