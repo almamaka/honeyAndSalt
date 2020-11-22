@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
 import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
@@ -26,11 +27,26 @@ public class RecipeSearchController {
 		return "mainpage";
 	}
 	
-	@PostMapping("/mainpage")
-	public String recipeSearch(Model model, String searchText) {
+	@PostMapping("/search")
+	public ModelAndView recipeSearch(String searchText) {
+		ModelAndView model = new ModelAndView("search");
 		List<Recipe> results = searchService.searchRecipeInstructionsContains(searchText);
-		model.addAttribute("searchResult", results);
-		return "redirect:/search";
+		model.addObject("search", results);
+		return model;
+	}
+//	
+//	@PostMapping("/mainpage")
+//	public String recipeSearch(Model model, String searchText) {
+//		List<Recipe> results = searchService.searchRecipeInstructionsContains(searchText);
+//		model.addAttribute("searchResults", results);
+//		return "redirect:/search";
+//	
+//	
+	@GetMapping("/search")
+	public String searchRecipes(Model model) {
+//		List<Recipe> results = searchService.searchRecipeInstructionsContains("komment");
+//		model.addAttribute("search", results);
+		return "search";
 	}
 	
 	@GetMapping("/listrecipes")

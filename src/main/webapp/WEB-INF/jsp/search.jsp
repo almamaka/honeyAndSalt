@@ -13,8 +13,9 @@
 <title>Salt And Honey - Találatok</title>
 </head>
 <body id="body">
-		<c:forEach var="searchResults" items="${results}">
-		<p>${searchResults}</p>
+<p>Lol</p>
+		<c:forEach var="searchResults" items="${search}">
+		<p>${searchResults.name}</p>
 	
 		</c:forEach>
 
