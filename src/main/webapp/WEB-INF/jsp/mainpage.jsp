@@ -58,7 +58,12 @@
             <div class="col-12 mt-1">
               
               <div class="p-3 md-form mt-0">
-                <input class="form-control" type="text" placeholder="Böngéssz..." aria-label="Search">
+              <form action="/search" method="post" class="form-group text-center py-2 rounded" id="search">
+                <input class="form-control" type="text" name="searchText" placeholder="Böngéssz..." aria-label="Search">
+                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
+                <a href="search">lol</a>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </form>
               </div>
               <div class="col-2 form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
