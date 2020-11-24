@@ -1,9 +1,15 @@
 package webler.szakdolgozat.honeyAndSalt.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Recipe {
@@ -14,8 +20,12 @@ public class Recipe {
 	private String name;
 	private Integer prepTime;
 	private Integer cookTime;
+	
+	@Column(length = 5000)
 	private String instructions;
 	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+	private List<Ingredients> ingredients;
 	
 	public Long getId() {
 		return id;
@@ -47,5 +57,15 @@ public class Recipe {
 	public void setInstructions(String instructions) {
 		this.instructions = instructions;
 	}
+	
+	public List<Ingredients> getIngredients() {
+		if (ingredients == null) {
+			ingredients = new ArrayList<>();
+		}
+		return ingredients;
+	}
 
+	public void setIngredients(List<Ingredients> ingredients) {
+		this.ingredients = ingredients;
+	}
 }

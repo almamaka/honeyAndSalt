@@ -70,6 +70,7 @@
 			<th id="recipeCooktime">Elkészítési idő</th>
 			<th id="recipeInstructions">Elkészítés</th>
 			<th id="actions">Műveletek</th>
+      <th id="recipeIngredients">Összetevők</th>
 		</tr>
 		<c:forEach var="recipe" items="${recipes}">
 		<tr>
@@ -80,6 +81,11 @@
 			<td>${recipe.instructions }</td>
 			<td>
 				<a href="/edit/${recipe.id }">Módosítás</a> | <a href="/del/${recipe.id }">Törlés</a>
+			</td>
+			<td>
+				<c:forEach var="ingredients" items="${recipe.ingredients}">
+					${ingredients.name } <br>
+				</c:forEach> 
 			</td>
 		</tr>
 	
