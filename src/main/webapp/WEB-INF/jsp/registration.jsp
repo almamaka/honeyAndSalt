@@ -20,42 +20,57 @@
 
     <div class="container-fluid my-4 mx-3">
         <div class="row justify-content-center border rounded" id="box">
-            <div class="col-md-12">
+            <div class="col-12" id="registrationbox">
+            <br>
                 <h3 class="p2">Hozd létre a felhasználód!</h3>
                 <form:form method="POST" modelAttribute="userForm" class="form-group text-center py-2 rounded">
                     
                         <spring:bind path="username">
-                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <div class="form-group ${status.error ? 'has-error' : ''}" id="usernamereg">                         
+                            <br>
                                 <label for="">Felhasználónév</label>
+                              	<br>
                                 <form:input type="text" path="username" class="form-control pt-3 pb-3 mx-2" placeholder="Felhasználónév"
                                             autofocus="true"></form:input>
-                                <form:errors path="username"></form:errors>
+                                            <br>
+                                <form:errors class="justify-content-center text-light bg-danger" path="username"></form:errors>
+                                
                             </div>
                         </spring:bind>
                     
                         <spring:bind path="email">
-                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <div class="form-group ${status.error ? 'has-error' : ''}" id="emailreg">
+                            <br>
                                 <label for="">E-mail cím</label>
+                           		<br>
                                 <form:input type="email" path="email" class="form-control"
                                             placeholder="E-mail cím"></form:input>
-                                <form:errors path="email"></form:errors>
+                                            <br>
+                                <form:errors class="justify-content-center text-light bg-danger" path="email"></form:errors>
                             </div>
                         </spring:bind>
                     
                         <spring:bind path="password">
-                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <div class="form-group ${status.error ? 'has-error' : ''}" id="passwordreg">
+                            <br>
                                 <label for="">Jelszó</label>
+                    			<br>
                                 <form:input type="password" path="password" class="form-control pt-3 pb-3 mx-2" placeholder="Jelszó"></form:input>
-                                <form:errors path="password"></form:errors>
+                                <br>
+                            <form:errors class="justify-content-center text-light bg-danger" path="password"></form:errors>
                             </div>
                         </spring:bind>
                    
                         <spring:bind path="passwordConfirm">
-                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                            <div class="form-group ${status.error ? 'has-error' : ''}" id="passwordregok">
+                                <br>
                                 <label for="">Jelszó megerősítése</label>
+                         		<br>
                                 <form:input type="password" path="passwordConfirm" class="form-control pt-3 pb-3 mx-2"
                                             placeholder="Jelszó megerősítése"></form:input>
-                                <form:errors path="passwordConfirm"></form:errors>
+                                            <br> 
+                            <form:errors class="justify-content-center text-light bg-danger" path="passwordConfirm"></form:errors>
+                                
                             </div>
                         </spring:bind>
                   

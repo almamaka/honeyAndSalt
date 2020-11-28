@@ -47,11 +47,16 @@
           </ul>
         </div>
       </nav>
-      <section>
+      <section class="mt-5">
+      <div class="container" id="resultbox">
 			<c:forEach var="searchResults" items="${search}">
-				<p>${searchResults}</p>
+			    <h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
+          		<hr>
+				<p>${searchResults.name}</p>
+				<p>${searchResults.instructions}</p>
 	
 			</c:forEach>
+	</div>
 	</section>
 	<section class="mt-5">
       <div class="container" id="bigbox">
