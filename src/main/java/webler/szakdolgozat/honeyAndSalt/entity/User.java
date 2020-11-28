@@ -1,6 +1,9 @@
 package webler.szakdolgozat.honeyAndSalt.entity;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -21,6 +24,10 @@ public class User {
 
     @ManyToMany
     private Set<Role> roles;
+    
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "recipe_user")
+    private List<Recipe> likedRecipes;
 
     public Long getId() {
         return id;
@@ -60,6 +67,16 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public List<Recipe> getLikedRecipes() {
+		if (likedRecipes == null) {
+			likedRecipes = new ArrayList<>();
+		}
+		return likedRecipes;
+	}
+	public void setLikedRecipes(List<Recipe> likedRecipes) {
+		this.likedRecipes = likedRecipes;
 	}
 
 	public Set<Role> getRoles() {

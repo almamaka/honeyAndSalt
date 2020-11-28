@@ -82,6 +82,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+			        <execution>
+			            <configuration>
+			                <mainClass>webler.szakdolgozat.honeyAndSalt.HoneyAndSaltApplication</mainClass>
+			            </configuration>
+			        </execution>
+			    </executions>
 				<configuration>
     				<addResources>true</addResources>
 				</configuration>
