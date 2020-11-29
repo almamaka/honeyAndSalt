@@ -9,21 +9,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import webler.szakdolgozat.honeyAndSalt.entity.User;
-import webler.szakdolgozat.honeyAndSalt.service.SecurityService;
 import webler.szakdolgozat.honeyAndSalt.service.UserService;
-import webler.szakdolgozat.honeyAndSalt.validator.UserValidator;
+
 
 @Controller
 public class UserController {
 
 	@Autowired
     private UserService userService;
-
-    @Autowired
-    private SecurityService securityService;
-
-    @Autowired
-    private UserValidator userValidator;
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -34,17 +27,15 @@ public class UserController {
 
     @PostMapping("/registration")
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
-        userValidator.validate(userForm, bindingResult);
+    	userService.register(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "registration";
         }
+        else {
 
-        userService.save(userForm);
-
-        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
-
-        return "redirect:/welcome";
+        	return "redirect:/welcome";
+        }
     }
 
     @GetMapping("/")

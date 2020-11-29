@@ -1,8 +1,8 @@
 package webler.szakdolgozat.honeyAndSalt.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,6 +10,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 @Service
 public class SecurityServiceImplementation implements SecurityService{
 	
@@ -17,9 +20,8 @@ public class SecurityServiceImplementation implements SecurityService{
     private AuthenticationManager authenticationManager;
 
     @Autowired
+    @Qualifier("userDetailsServiceImplementation")
     private UserDetailsService userDetailsService;
-
-    private static final Logger logger = LoggerFactory.getLogger(SecurityServiceImplementation.class);
 
     @Override
     public String findLoggedInUsername() {
@@ -40,7 +42,7 @@ public class SecurityServiceImplementation implements SecurityService{
 
         if (usernamePasswordAuthenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-            logger.debug(String.format("Automatikus beléptetés sikeres volt!", username));
+            //log.debug(String.format("Automatikus beléptetés sikeres volt!", username));
         }
     }
 }
