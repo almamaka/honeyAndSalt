@@ -6,9 +6,11 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -26,6 +28,9 @@ public class Recipe {
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
 	private List<Ingredients> ingredients;
+	
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "likedRecipes", fetch = FetchType.EAGER)
+	private List<User> users;
 	
 	public Long getId() {
 		return id;
@@ -67,5 +72,16 @@ public class Recipe {
 
 	public void setIngredients(List<Ingredients> ingredients) {
 		this.ingredients = ingredients;
+	}
+	
+	public List<User> getUsers() {
+		if (users == null) {
+			users = new ArrayList<>();
+		}
+		return users;
+	}
+	
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 }

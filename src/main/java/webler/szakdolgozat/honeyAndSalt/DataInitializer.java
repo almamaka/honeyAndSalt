@@ -3,11 +3,14 @@ package webler.szakdolgozat.honeyAndSalt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import webler.szakdolgozat.honeyAndSalt.entity.Ingredients;
 import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
+import webler.szakdolgozat.honeyAndSalt.entity.User;
 import webler.szakdolgozat.honeyAndSalt.repository.HoneyAndSaltRepository;
+import webler.szakdolgozat.honeyAndSalt.repository.UserRepository;
 
 @Component
 public class DataInitializer implements ApplicationListener<ContextRefreshedEvent> {
@@ -15,8 +18,22 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	@Autowired
 	private HoneyAndSaltRepository honeyrepo;
 	
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Autowired
+	private PasswordEncoder passEncoder;
+	
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
+		
+		User u = new User();
+		u.setUsername("almamaka");
+		u.setPassword(passEncoder.encode("11111111"));
+		
+		userRepo.save(u);
+		
+
 		Recipe r = new Recipe();
 		r.setName("Rakott tócsni liszt nélkül");
 		r.setPrepTime(60);
@@ -161,7 +178,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r3.getIngredients().add(r3i4);
 		r3.getIngredients().add(r3i5);
 
-		
 		honeyrepo.save(r2);
 	}
 }

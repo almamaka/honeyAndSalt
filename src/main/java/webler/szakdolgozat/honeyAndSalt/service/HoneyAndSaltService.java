@@ -18,5 +18,15 @@ public class HoneyAndSaltService {
 		
 		return honeyRepo.findAll();
 	}
+
+	public Recipe getOneRecipe(Long id) {
+		
+		return honeyRepo.getOne(id);
+	}
+
+	public void simpleSave(Recipe recipe) {
+		
+		honeyRepo.save(recipe);
+	}
 	
 }
