@@ -1,4 +1,4 @@
-package webler.szakdolgozat.honeyAndSalt;
+package webler.szakdolgozat.honeyAndSalt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
