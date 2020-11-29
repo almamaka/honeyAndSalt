@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
-import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
 import webler.szakdolgozat.honeyAndSalt.service.SearchService;
 
 @Controller
