@@ -31,8 +31,8 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link" href="mainpage#search">Receptböngésző</a>
-				</li>
+				<li class="nav-item mr-4"><a class="nav-link"
+					href="mainpage#search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -89,6 +89,7 @@
 							<th id="recipeCooktime">Elkészítési idő</th>
 							<th id="recipeInstructions">Elkészítés</th>
 							<th id="recipeIngredients">Összetevők</th>
+							<th id="likes">Kedvencnek jelölve:</th>
 							<th id="actions">Műveletek</th>
 
 						</tr>
@@ -103,19 +104,20 @@
 										items="${recipe.ingredients}">
 					${ingredients.name } <br>
 									</c:forEach></td>
+								<td><c:forEach var="user" items="${recipe.users}">
+					${user.username } <br>
+									</c:forEach></td>
 								<td><a href="/edit/${recipe.id }">Módosítás</a> | <a
-									href="/del/${recipe.id }">Törlés</a>
-													<c:if test="${not fn:containsIgnoreCase(recipe.users, user)}">
-					<a href="/like/${recipe.id }">Kedvenc!</a>
-				</c:if>
-				<c:if test="${fn:containsIgnoreCase(recipe.users, user)}">
-					<a href="/unlike/${recipe.id }">Kivétel a kedvencek közül</a>
-				</c:if>
+									href="/del/${recipe.id }">Törlés</a> 
+									<c:if
+										test="${not fn:containsIgnoreCase(recipe.users, user)}">
+										<a href="/like/${recipe.id }">Kedvenc!</a>
+									</c:if> 
+									<c:if test="${fn:containsIgnoreCase(recipe.users, user)}">
+										<a href="/unlike/${recipe.id }">Kivétel a kedvencek közül</a>
+									</c:if>
 								</td>
-
 							</tr>
-
-							<h2>${recipe}</h2>
 						</c:forEach>
 					</table>
 					<br> <a href="/newrecipe">Új recept rögzítése</a>
