@@ -42,7 +42,7 @@ public class SecurityServiceImplementation implements SecurityService{
 
         if (usernamePasswordAuthenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-            //log.debug(String.format("Automatikus beléptetés sikeres volt!", username));
+            log.debug(String.format("Automatikus beléptetés sikeres volt!", username));
         }
     }
 }

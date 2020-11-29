@@ -21,7 +21,7 @@ import webler.szakdolgozat.honeyAndSalt.entity.User;
 
 @Log4j2
 @Service
-public class EmailSenderServiceImplementation {
+public class EmailSenderServiceImplementation implements EmailSenderService {
 	
 	@Value("${mail.sender.email}")
 	private String senderEmail;

@@ -29,14 +29,14 @@ public class EmailResolverConfig {
 	}
 
 	@Bean
-	private ISpringTemplateEngine springTemplateEngine() {
+	public SpringTemplateEngine springTemplateEngine() {
 		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
 		templateEngine.addTemplateResolver(htmlTemplateResolver());
 		return templateEngine;
 	}
 
 	@Bean
-	private ITemplateResolver htmlTemplateResolver() {
+	public SpringResourceTemplateResolver htmlTemplateResolver() {
 		SpringResourceTemplateResolver emailTemplateResolver = new SpringResourceTemplateResolver();
 		emailTemplateResolver.setPrefix("classpath:/templates/");
 		emailTemplateResolver.setSuffix(".html");
