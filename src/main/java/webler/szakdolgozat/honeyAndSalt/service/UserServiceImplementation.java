@@ -3,6 +3,7 @@ package webler.szakdolgozat.honeyAndSalt.service;
 import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
@@ -84,5 +85,10 @@ public class UserServiceImplementation implements UserService, Validator {
 		if (!user.getPasswordConfirm().equals(user.getPassword())) {
 			errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
 		}
+	}
+	
+	@Override
+	public User getLoggedInUser(String username) {
+		return findByUsername(username);
 	}
 }
