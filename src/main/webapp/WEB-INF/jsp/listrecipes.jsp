@@ -28,7 +28,7 @@
               <a class="nav-link" href="#search">Receptböngésző</a>
             </li>
             <li class="nav-item mr-4">
-              <a class="nav-link" href="#favourite">Kedvenc receptek</a>
+              <a class="nav-link" href="favourites">Kedvenc receptek</a>
             </li>
             <li class="nav-item mr-4">
                 <a class="nav-link" href="#account">Felhasználói fiók</a>

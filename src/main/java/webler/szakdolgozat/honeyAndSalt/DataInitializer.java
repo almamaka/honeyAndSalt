@@ -95,7 +95,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		honeyrepo.save(r);
 		
 		Recipe r2 = new Recipe();
-		r2.setName("Székelykáposzta");
+		r2.setName("Olasz pizzatészta");
 		r2.setPrepTime(30);
 		r2.setCookTime(10);
 		r2.setInstructions("<p>Langyos víz felében oldjuk fel az élesztőt, majd adjuk hozzá a liszt felét és a sót.Hagyjuk állni szobahőmérsékleten körülbelül negyed órát.</p>" + 

@@ -7,6 +7,12 @@ body {
 	height: 150vh;
 }
 
+h3 {
+	color: black;
+	font-variant: small-caps;
+	text-shadow: 2px 2px white;
+}
+
 #box {
 	
     align-items: center !important;
@@ -35,3 +41,13 @@ input {
 	color: rgb(51, 37, 17) !important;
 	font-size: large;
 }
+
+#registrationbox input {
+	width: 300px !important;
+	margin-bottom: 5px;
+}
+
+#registrationbox label {
+	margin-top: 8px;
+}
+
