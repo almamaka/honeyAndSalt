@@ -3,11 +3,16 @@ package webler.szakdolgozat.honeyAndSalt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import webler.szakdolgozat.honeyAndSalt.entity.Ingredients;
 import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
+import webler.szakdolgozat.honeyAndSalt.entity.Role;
+import webler.szakdolgozat.honeyAndSalt.entity.User;
 import webler.szakdolgozat.honeyAndSalt.repository.HoneyAndSaltRepository;
+import webler.szakdolgozat.honeyAndSalt.repository.RoleRepository;
+import webler.szakdolgozat.honeyAndSalt.repository.UserRepository;
 
 @Component
 public class DataInitializer implements ApplicationListener<ContextRefreshedEvent> {
@@ -15,16 +20,32 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	@Autowired
 	private HoneyAndSaltRepository honeyrepo;
 	
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Autowired
+	private RoleRepository roleRepo;
+	
+	@Autowired
+	private PasswordEncoder passEncoder;
+	
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
+		
+		User u = new User();
+		u.setUsername("almamaka");
+		u.setPassword(passEncoder.encode("11111111"));
+		
+		userRepo.save(u);	
+			
 		Recipe r = new Recipe();
 		r.setName("Rakott tócsni liszt nélkül");
 		r.setPrepTime(60);
 		r.setCookTime(30);
-		r.setInstructions("<p>Gluténmentes recept. A burgonyát, sárgarépát és a hagymát megtisztítjuk és lereszeljük. Hozzáadjuk a fűszereket és a tojásokat.</p>"
-				+ "<p>Sütőpapírral bélelt tepsibe öntjük a masszát. 170 °C előmelegített sütőben szép aranyszínűre sütjük.</p>"
-				+ "<p>Ha megsült, felkockázzuk. A kockákat megkenjük a sajtkrémmel.</p>"
-				+ "<p>A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p>");
+		r.setInstructions("<p>Gluténmentes recept. A burgonyát, sárgarépát és a hagymát megtisztítjuk és lereszeljük. Hozzáadjuk a fűszereket és a tojásokat."
+				+ "Sütőpapírral bélelt tepsibe öntjük a masszát. 170 °C előmelegített sütőben szép aranyszínűre sütjük."
+				+ "Ha megsült, felkockázzuk. A kockákat megkenjük a sajtkrémmel."
+				+ "A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p>");
 		
 		Ingredients i = new Ingredients();
 		i.setName("1,5 kg burgonya");
@@ -98,14 +119,14 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r2.setName("Olasz pizzatészta");
 		r2.setPrepTime(30);
 		r2.setCookTime(10);
-		r2.setInstructions("<p>Langyos víz felében oldjuk fel az élesztőt, majd adjuk hozzá a liszt felét és a sót.Hagyjuk állni szobahőmérsékleten körülbelül negyed órát.</p>" + 
-				"<p>Adjuk hozzá a maradék lisztet, és gyúrjuk a tésztát keverőgépben vagy kézzel, amíg megfelelő állagú nem lesz.</p>" + 
-				"<p>A tésztából formázzunk kis zsemléket, és hagyjuk őket állni letakarva körülbelül 8 órán át.</p>" + 
-				"<p>Miután megkeltek a tészták, nyújtsuk ki őket kerek pizza formára, és helyezzük rájuk a feltéteket.</p>" + 
-				"<p>220-250 fokon előmelegített sütőben készre sütjük.</p> <div id='forras'>~ forrás: nosalty.hu</div>");
+		r2.setInstructions("<p>Langyos víz felében oldjuk fel az élesztőt, majd adjuk hozzá a liszt felét és a sót.Hagyjuk állni szobahőmérsékleten körülbelül negyed órát." + 
+				"Adjuk hozzá a maradék lisztet, és gyúrjuk a tésztát keverőgépben vagy kézzel, amíg megfelelő állagú nem lesz." + 
+				"A tésztából formázzunk kis zsemléket, és hagyjuk őket állni letakarva körülbelül 8 órán át." + 
+				"Miután megkeltek a tészták, nyújtsuk ki őket kerek pizza formára, és helyezzük rájuk a feltéteket." + 
+				"220-250 fokon előmelegített sütőben készre sütjük.</p> <div id='forras'>~ forrás: nosalty.hu</div>");
 		
 		Ingredients r2i = new Ingredients();
-		r2i.setName("1 k2g liszt");
+		r2i.setName("1 kg liszt");
 		r2i.setRecipe(r2);
 		
 		Ingredients r2i2 = new Ingredients();
@@ -161,7 +182,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r3.getIngredients().add(r3i4);
 		r3.getIngredients().add(r3i5);
 
-		
 		honeyrepo.save(r2);
 	}
 }

@@ -10,5 +10,9 @@ public interface UserService {
 	
 	void save (User user);
 	
+	User getLoggedInUser(String username);
+	
 	User findByUsername(String username);
+	
+	Long getUserId(String username);
 }

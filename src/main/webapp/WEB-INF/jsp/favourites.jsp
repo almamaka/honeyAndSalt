@@ -1,3 +1,4 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -21,7 +22,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top"
 		id="navbar">
-		<a class="navbar-brand ml-4" href="#">Honey And Salt</a>
+		<a class="navbar-brand ml-4" href="mainpage">Honey And Salt</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +30,9 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item mr-4"><a class="nav-link" href="#">Főoldal</a>
+				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link" href="#search">Receptböngésző</a>
+				<li class="nav-item mr-4"><a class="nav-link" href="mainpage#search">Receptböngésző</a>
 				</li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
@@ -53,6 +54,44 @@
 			</ul>
 		</div>
 	</nav>
+	<table border="1">
+						<caption></caption>
+						<tr>
+							<th id="id">ID</th>
+							<th id="recipeName">Recept neve</th>
+							<th id="recipePreptime">Előkészítési idő</th>
+							<th id="recipeCooktime">Elkészítési idő</th>
+							<th id="recipeInstructions">Elkészítés</th>
+							<th id="recipeIngredients">Összetevők</th>
+							<th id="actions">Műveletek</th>
+
+						</tr>
+						<c:forEach var="recipe" items="${recipes}">
+							<tr>
+								<td>${recipe.id }</td>
+								<td>${recipe.name }</td>
+								<td>${recipe.prepTime }</td>
+								<td>${recipe.cookTime }</td>
+								<td>${recipe.instructions }</td>
+								<td><c:forEach var="ingredients"
+										items="${recipe.ingredients}">
+					${ingredients.name } <br>
+									</c:forEach></td>
+								<td><a href="/edit/${recipe.id }">Módosítás</a> | <a
+									href="/del/${recipe.id }">Törlés</a>
+													<c:if test="${not fn:containsIgnoreCase(recipe.users, user)}">
+					<a href="/like/${recipe.id }">Kedvenc!</a>
+				</c:if>
+				<c:if test="${fn:containsIgnoreCase(recipe.users, user)}">
+					<a href="/unlike/${recipe.id }">Kivétel a kedvencek közül</a>
+				</c:if>
+								</td>
+
+							</tr>
+
+							<h2>${recipe}</h2>
+						</c:forEach>
+					</table>
 
 
 
