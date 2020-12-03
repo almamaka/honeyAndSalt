@@ -24,6 +24,9 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	private UserRepository userRepo;
 	
 	@Autowired
+	private RoleRepository roleRepo;
+	
+	@Autowired
 	private PasswordEncoder passEncoder;
 	
 	@Override
@@ -33,8 +36,8 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		u.setUsername("almamaka");
 		u.setPassword(passEncoder.encode("11111111"));
 		
-		userRepo.save(u);
-	
+		userRepo.save(u);	
+			
 		Recipe r = new Recipe();
 		r.setName("Rakott tócsni liszt nélkül");
 		r.setPrepTime(60);

@@ -21,6 +21,7 @@ public class ListController {
 		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() == null) {
 			return "redirect:/index";
 		}
+		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
 		model.addAttribute("recipes", honeyService.getAll());
 		model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
 		return "listrecipes";

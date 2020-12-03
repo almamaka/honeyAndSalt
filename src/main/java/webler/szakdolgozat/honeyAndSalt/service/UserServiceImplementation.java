@@ -91,4 +91,9 @@ public class UserServiceImplementation implements UserService, Validator {
 	public User getLoggedInUser(String username) {
 		return findByUsername(username);
 	}
+	
+	@Override
+	public Long getUserId(String username) {
+		return userRepository.findByUsername(username).getId();
+	}
 }
