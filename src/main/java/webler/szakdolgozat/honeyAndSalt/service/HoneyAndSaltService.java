@@ -28,5 +28,22 @@ public class HoneyAndSaltService {
 		
 		honeyRepo.save(recipe);
 	}
-	
+
+	public Recipe getOne(Long id) {
+		return honeyRepo.getOne(id);
+	}
+
+	public void saveRecipe(Recipe recipe) {
+		if (recipe.getId() != null) {
+			Recipe original = getOne(recipe.getId());
+			original.setName(recipe.getName());
+			original.setCookTime(recipe.getCookTime());
+			original.setPrepTime(recipe.getPrepTime());
+			original.setInstructions(recipe.getInstructions());
+			recipe = original;
+		}
+		
+		honeyRepo.save(recipe);
+
+	}	
 }

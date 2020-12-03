@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
 import webler.szakdolgozat.honeyAndSalt.entity.User;
 import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
-import webler.szakdolgozat.honeyAndSalt.service.UserDetailsServiceImplementation;
 import webler.szakdolgozat.honeyAndSalt.service.UserServiceImplementation;
 
 @Controller
