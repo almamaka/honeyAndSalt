@@ -108,7 +108,7 @@
 					${user.username } <br>
 									</c:forEach></td>
 								<td><a href="/edit/${recipe.id }">Módosítás</a> | <a
-									href="/del/${recipe.id }">Törlés</a> 
+									href="/delete/${recipe.id }">Törlés</a> 
 									<c:if
 										test="${not fn:containsIgnoreCase(recipe.users, user)}">
 										<a href="/like/${recipe.id }">Kedvenc!</a>

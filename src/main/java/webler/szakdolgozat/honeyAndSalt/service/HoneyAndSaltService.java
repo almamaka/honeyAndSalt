@@ -45,5 +45,9 @@ public class HoneyAndSaltService {
 		
 		honeyRepo.save(recipe);
 
-	}	
+	}
+	
+	public void deleteRecipe(Long id) {
+		honeyRepo.deleteById(id);
+	}
 }
