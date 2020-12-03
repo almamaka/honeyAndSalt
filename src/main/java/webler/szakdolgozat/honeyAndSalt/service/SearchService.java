@@ -18,4 +18,9 @@ public class SearchService {
 		
 		return honeyRepo.findByInstructionsContaining(infix);
 	}
+	
+	public List<Recipe> searchRecipeNameContains(String infix) {
+		
+		return honeyRepo.findByNameContaining(infix);
+	}
 }

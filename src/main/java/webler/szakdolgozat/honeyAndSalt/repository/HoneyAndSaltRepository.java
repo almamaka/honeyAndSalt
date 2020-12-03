@@ -8,5 +8,7 @@ import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
 
 public interface HoneyAndSaltRepository extends JpaRepository<Recipe, Long> {
 	List<Recipe> findByInstructionsContaining(String infix);
+	
+	List<Recipe> findByNameContaining(String infix);
 
 }
