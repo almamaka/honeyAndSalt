@@ -53,7 +53,7 @@
 			<c:forEach var="searchResults" items="${search}">
 			    
           		<hr>
-				<p>${searchResults.name}</p>
+				<p id="result_name">${searchResults.name}</p>
 				<p>${searchResults.instructions}</p>
 				<img src="${searchResults.img}" alt="${searchResults.name}">
 				

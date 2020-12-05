@@ -15,12 +15,6 @@ body {
     text-shadow: 3px 3px rgb(61, 50, 30) !important;
 }
 
-#btn {
-
-    padding: 6px 60px !important;
-
-}
-
 .bg{
     display: flex;
     align-items: center;
@@ -69,29 +63,40 @@ hr {
 
 }
 
-
-h3{
-
-    cursor: pointer;
-    text-shadow: 3px 3px rgb(191, 155, 94);
-
+h2 {
+	color: black;
+	font-variant: small-caps;
+	text-shadow: 2px 2px white;
 }
 
 #contact {
     display: flex;
-    align-items: center !important;
-    text-align: center !important;
+   	text-align: center !important;
     background: url("1_background.jpg") no-repeat center center !important;
     background-size: cover !important;
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 191, 71, 0.7) !important;
-    text-shadow: 3px 3px rgb(191, 155, 94) !important;
-    font-weight: bold;
+    color: rgb(51, 37, 17);
+	text-shadow: none !important;
+    font-weight: bold !important;
 }
 
 
 img {
 	border-radius: 8px;
+	border: 2px black;
 	padding: 5px;
   	width: 300px !important;
 }
+
+.next {
+	color: black;
+	font-variant: small-caps;
+	text-shadow: 2px 2px white;
+	font-size: large;
+	font-weight: bold;
+}
+
+#result_name {
+	color: black;
+	font-weight: bold;
+}
+

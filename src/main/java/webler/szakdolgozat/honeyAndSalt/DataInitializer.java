@@ -45,7 +45,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r.setInstructions("<p>Gluténmentes recept. A burgonyát, sárgarépát és a hagymát megtisztítjuk és lereszeljük. Hozzáadjuk a fűszereket és a tojásokat."
 				+ "Sütőpapírral bélelt tepsibe öntjük a masszát. 170 °C előmelegített sütőben szép aranyszínűre sütjük."
 				+ "Ha megsült, felkockázzuk. A kockákat megkenjük a sajtkrémmel."
-				+ "A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p>");
+				+ "A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p><p> ~ https://cookpad.com/</p>");
 		r.setImg("img/tocsni.jpg");
 		
 		Ingredients i = new Ingredients();

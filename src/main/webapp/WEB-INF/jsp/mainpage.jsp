@@ -53,17 +53,13 @@
             <div class="text">
                 <h1 class="display-3">Salt And Honey - A hűtőtől a receptkönyvig</h1>
                 <p class="lead" id="lead">Keress alapanyagokra! Keress diétád szerint! Mentsd el kedvenced!</p>
-                <button id="go" class="btn btn-light btn-lg">Indulás!</button>
+                <button id="#search" class="btn btn-light btn-lg">Indulás!</button>
             </div>
         </div>
     </section>
 
     <section class="mt-5">
-      <div class="container" id="bigbox">
-        <a href="listrecipes" class="next" integrity="">Összes recept<br></a>
-        <a name="search"></a>
-        <br>
-        <br>
+      <div name="#search" class="container" id="bigbox">
           <h2 class="text-left display-5 mx-1">Receptböngésző</h2>
           <hr>
           <div class="row justify-content-center">
@@ -71,40 +67,26 @@
 
               <div class="p-3 md-form mt-0">
               <form action="/search" method="post" class="form-group text-center py-2 rounded" id="search">
+              <p>Keress receptekre a nevük alapján, vagy az elkészítési leírás szövegében! Egyszerre csak egy szóra keress!</p>
+                <p>Ha diétád alapján keresnél, keress rá az adott alapanyag mentességre! Például: gluténmentes, laktózmentes, stb.</p>
                 <input class="form-control" type="text" name="searchText" placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..." aria-label="Search">
-                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
+                <br>
+                <button type="submit" name="search" class="btn btn-light" id="btn" integrity="">Keresés</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
               </div>
               <div class="p-3 md-form mt-0">
               <form action="/searchingredients" method="post" class="form-group text-center py-2 rounded" id="searchIngredients">
+                <p>Keress receptekre az összetevőik alapján! Egyszerre csak egy alapanyagra tudsz keresni.</p>
                 <input class="form-control" type="text" name="searchText" placeholder="Böngéssz összetevők szerint..." aria-label="Search">
-                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
+                <br>
+                <button type="submit" name="search" class="btn btn-light" id="btn" integrity="">Keresés</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
+                <a href="listrecipes" class="next" integrity="">Nézd meg az összes receptet!<br></a>
               </div>
 
-              <div class="col-12 mt-4">
-                  <a name="favourite"></a>
-                  <h3 id="title2">Kedvenc receptjeim</h3>
-                  <hr>
-                  <div id="helyszinek_leiras">
-                      <div class="row">
-                          
-                      </div>
-                  </div>
-              </div>
 
-              <div class="col-12  mt-4">
-                  <a name="account"></a>
-                  <h3 id="title3"></h3>
-                  <hr>
-                  <div id="fegyver_leiras">
-                      <div class="row">
-                          
-                      </div>
-                  </div>
-              </div>
           </div>
       </div>
       </div>
@@ -117,8 +99,8 @@
               <br>
               <h3>Elérhetőségem:</h3>
               <ul>
-                  <li>Telefonszám: +3640444333</li>
-                  <li>E-mail: acforthelife@kukac.hu</li>
+                  <li>Telefonszám: +36309999999</li>
+                  <li>E-mail: info@honeyandsalt.hu</li>
               </ul>
               <br>
           </div>
