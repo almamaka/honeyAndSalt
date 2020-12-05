@@ -84,7 +84,7 @@ img {
 	border-radius: 8px;
 	border: 2px black;
 	padding: 5px;
-  	width: 300px !important;
+  	width: 100% !important;
 }
 
 .next {
@@ -98,5 +98,9 @@ img {
 #result_name {
 	color: black;
 	font-weight: bold;
+}
+
+.card-text {
+	color: black;
 }
 

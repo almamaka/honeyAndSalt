@@ -58,6 +58,14 @@
 		<div class="container" id="resultbox">
 			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
 			<c:forEach var="searchResults" items="${search}">
+				<div class="card col-4">
+					<img class="card-img-top" src="${searchResults.img}" alt="${searchResults.name}">
+					<div class="card-body">
+						<h5 class="card-title">${searchResults.name}</h5>
+						<p class="card-text">A részletekért kattints a gombra...</p>
+						<a href="/list/${searchResults.name }">Megnézem!</a>
+					</div>
+				</div>
 				<hr>
 				<a href="/list/${searchResults.name }">${searchResults.name}</a>
 				<p id="result_name">${searchResults.name}</p>
