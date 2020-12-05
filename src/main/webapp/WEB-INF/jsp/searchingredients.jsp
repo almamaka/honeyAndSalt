@@ -26,7 +26,7 @@
               <a class="nav-link" href="mainpage">Főoldal</a>
             </li>
             <li class="nav-item mr-4">
-              <a class="nav-link" href="mainpage#search">Receptböngésző</a>
+              <a class="nav-link" href="search">Receptböngésző</a>
             </li>
             <li class="nav-item mr-4">
               <a class="nav-link" href="favourites">Kedvenc receptek</a>
@@ -49,6 +49,7 @@
       </nav>
       <section class="mt-5">
       <div class="container" id="resultbox">
+      <br>
 			<c:forEach var="ingredientResults" items="${search}">
 			    <h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
           		<hr>
@@ -56,6 +57,7 @@
 				<hr>
 				<p>${ingredientResults.recipe.name}</p>
 				<p>${ingredientResults.recipe.instructions}</p>
+				<img src="${searchResults.img}" alt="${searchResults.name}">
 	
 			</c:forEach>
 			

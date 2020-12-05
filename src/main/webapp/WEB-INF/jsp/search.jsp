@@ -33,7 +33,7 @@
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
 				<li class="nav-item mr-4"><a class="nav-link"
-					href="mainpage#search">Receptböngésző</a></li>
+					href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a

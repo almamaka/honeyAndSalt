@@ -32,7 +32,7 @@
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
 				<li class="nav-item mr-4"><a class="nav-link"
-					href="mainpage#search">Receptböngésző</a></li>
+					href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -54,17 +54,6 @@
 		</div>
 	</nav>
 
-	<section class="bg justify-content-center">
-		<div class="container p-4 rounded border" id="leadbox">
-			<div class="text">
-				<h1 class="display-3">Salt And Honey - A hűtőtől a
-					receptkönyvig</h1>
-				<p class="lead" id="lead">Keress alapanyagokra! Keress diétád
-					szerint! Mentsd el kedvenced!</p>
-				<button id="go" class="btn btn-light btn-lg">Indulás!</button>
-			</div>
-		</div>
-	</section>
 
 	<section class="mt-5">
 		<div class="container" id="bigbox">

@@ -32,7 +32,7 @@
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
 				<li class="nav-item mr-4"><a class="nav-link"
-					href="mainpage#search">Receptböngésző</a></li>
+					href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -62,7 +62,7 @@
 			<div class="row justify-content-center">
 				<div class="col-12 mt-1">
 
-					<h1>Recept Listázó</h1>
+					<h2 class="text-left display-5 mx-1">Recept listázó</h2>
 
 
 					<c:forEach var="recipe" items="${recipes}">
