@@ -49,11 +49,14 @@
       </nav>
       <section class="mt-5">
       <div class="container" id="resultbox">
+      <h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
 			<c:forEach var="searchResults" items="${search}">
-			    <h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
+			    
           		<hr>
 				<p>${searchResults.name}</p>
 				<p>${searchResults.instructions}</p>
+				<img src="${searchResults.img}" alt="${searchResults.name}">
+				
 	
 			</c:forEach>
 

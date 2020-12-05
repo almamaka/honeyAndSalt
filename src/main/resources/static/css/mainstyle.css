@@ -88,3 +88,10 @@ h3{
     text-shadow: 3px 3px rgb(191, 155, 94) !important;
     font-weight: bold;
 }
+
+
+img {
+	border-radius: 8px;
+	padding: 5px;
+  	width: 300px !important;
+}

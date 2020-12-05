@@ -47,7 +47,6 @@ public class RecipeSearchController {
 		List<Recipe> results = new ArrayList<>();
 		results.addAll(searchService.searchRecipeInstructionsContains(searchText));
 		results.addAll(searchService.searchRecipeNameContains(searchText));
-
 		model.addObject("search", results);
 		return model;
 	}
