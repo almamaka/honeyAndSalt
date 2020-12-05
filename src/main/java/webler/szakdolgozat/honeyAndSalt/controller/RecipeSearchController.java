@@ -29,17 +29,17 @@ public class RecipeSearchController {
 	public String searchRecipes(Model model) {
 		return "search";
 	}
-	
-	@GetMapping("/searchingredients")
-	public String recipeSearchByIngredientsContains(Model model) {
-		return "searchingredients";
-	}
-	
+
 	@PostMapping("/searchingredients")
 	public ModelAndView recipeSearchByNameContains(ModelAndView model, String searchText) {
 		List<Ingredients> resultsIng = searchService.searchIngredientsByNameContains(searchText);
 		model.addObject("search", resultsIng);
 		return model;
+	}
+	
+	@GetMapping("/searchingredients")
+	public String recipeSearchByIngredientsContains(Model model) {
+		return "searchingredients";
 	}
 	
 	@PostMapping("/search")
