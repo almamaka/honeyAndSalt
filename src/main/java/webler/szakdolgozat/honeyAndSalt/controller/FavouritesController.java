@@ -34,7 +34,7 @@ public class FavouritesController {
 		
 		honeyService.simpleSave(recipe);
 		
-		return "redirect:/listrecipes";
+		return "redirect:/favourites";
 	}
 	
 	@GetMapping("unlike/{id}")
@@ -48,7 +48,7 @@ public class FavouritesController {
 		
 		honeyService.simpleSave(recipe);
 		
-		return "redirect:/listrecipes";
+		return "redirect:/favourites";
 	}
 	
 	@GetMapping("/favourites")

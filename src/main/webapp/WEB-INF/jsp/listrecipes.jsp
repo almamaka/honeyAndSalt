@@ -15,7 +15,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
-<title>Salt And Honey - Összes recept</title>
+<title>Salt And Honey - Recept listázó</title>
 </head>
 <body id="body">
 
@@ -31,8 +31,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link"
-					href="mainpage#search">Receptböngésző</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -40,87 +39,76 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Felhasználói fiók </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<form class="form-group text-center py-2" id="logoutForm"
-							method="POST" action="${contextPath}/logout">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</form>
+
 						<a class="dropdown-item" href="userdata">Adatok</a>
 						<div class="dropdown-divider"></div>
 						<button class="dropdown-item btn btn-light btn-lg"
 							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-					</div></li>
+
+
+					</div>
+					<form class="form-group text-center py-2" id="logoutForm"
+						method="POST" action="${contextPath}/logout">
+						<input type="hidden" name="${_csrf.parameterName}"
+							value="${_csrf.token}" />
+					</form></li>
 			</ul>
 		</div>
 	</nav>
 
-	<section class="bg justify-content-center">
-		<div class="container p-4 rounded border" id="leadbox">
-			<div class="text">
-				<h1 class="display-3">Salt And Honey - A hűtőtől a
-					receptkönyvig</h1>
-				<p class="lead" id="lead">Keress alapanyagokra! Keress diétád
-					szerint! Mentsd el kedvenced!</p>
-				<button id="go" class="btn btn-light btn-lg">Indulás!</button>
-			</div>
-		</div>
-	</section>
+
 
 	<section class="mt-5">
 		<div class="container" id="bigbox">
-			<br> <br>
-			<h2 class="text-left display-5 mx-1">Receptböngésző</h2>
-			<hr>
+			<br>
 			<div class="row justify-content-center">
 				<div class="col-12 mt-1">
 
-					<div class="p-3 md-form mt-0">
-						<input class="form-control" type="text" placeholder="Böngéssz..."
-							aria-label="Search">
-					</div>
-					<h1>Összes recept</h1>
+					<h2 class="text-left display-5 mx-1">Recept listázó</h2>
+					<hr>
 
-					<table border="1">
-						<caption></caption>
-						<tr>
-							<th id="id">ID</th>
-							<th id="recipeName">Recept neve</th>
-							<th id="recipePreptime">Előkészítési idő</th>
-							<th id="recipeCooktime">Elkészítési idő</th>
-							<th id="recipeInstructions">Elkészítés</th>
-							<th id="recipeIngredients">Összetevők</th>
-							<th id="likes">Kedvencnek jelölve:</th>
-							<th id="actions">Műveletek</th>
+					<c:forEach var="recipe" items="${recipes}">
 
-						</tr>
-						<c:forEach var="recipe" items="${recipes}">
-							<tr>
-								<td>${recipe.id }</td>
-								<td>${recipe.name }</td>
-								<td>${recipe.prepTime }</td>
-								<td>${recipe.cookTime }</td>
-								<td>${recipe.instructions }</td>
-								<td><c:forEach var="ingredients"
-										items="${recipe.ingredients}">
-					${ingredients.name } <br>
-									</c:forEach></td>
-								<td><c:forEach var="user" items="${recipe.users}">
+						<p>Recept sorszáma: ${recipe.id }</p>
+						<p id="recipe_title">${recipe.name }</p>
+						<p>${recipe.instructions }</p>
+						<br>
+						<p>
+							<strong id="result_name">Elkészítési idő: </strong>${recipe.prepTime }</p>
+						<p>
+							<strong id="result_name">Sütési/főzési idő: </strong>${recipe.cookTime }</p>
+						<br>
+						<p>
+							<img id="list_img" src="${recipe.img}" alt="${recipe.name}">
+						</p>
+						<p>
+							<strong id="result_name">Összetevők listája:</strong>
+						<p>
+							<c:forEach var="ingredients" items="${recipe.ingredients}">
+					${ingredients.name }, </c:forEach>
+						<p>
+							<strong id="resu
+						lt_name">Kedvencnek jelölte:</strong>
+							<c:forEach var="user" items="${recipe.users}">
 					${user.username } <br>
-									</c:forEach></td>
-								<td><a href="/edit/${recipe.id }">Módosítás</a> | <a
-									href="/delete/${recipe.id }">Törlés</a> 
-									<c:if
-										test="${not fn:containsIgnoreCase(recipe.users, user)}">
-										<a href="/like/${recipe.id }">Kedvenc!</a>
-									</c:if> 
-									<c:if test="${fn:containsIgnoreCase(recipe.users, user)}">
-										<a href="/unlike/${recipe.id }">Kivétel a kedvencek közül</a>
-									</c:if>
-								</td>
-							</tr>
-						</c:forEach>
-					</table>
-					<br> <a href="/newrecipe">Új recept rögzítése</a>
+							</c:forEach>
+						</p>
+						<p>
+							<a class="btn btn-dark" href="/edit/${recipe.id }">Módosítás</a>
+							<a class="btn btn-dark" href="/delete/${recipe.id }">Törlés</a>
+							<c:if test="${not fn:containsIgnoreCase(recipe.users, user)}">
+								<a class="btn btn-dark" href="/like/${recipe.id }">Kedvenc!</a>
+							</c:if>
+							<c:if test="${fn:containsIgnoreCase(recipe.users, user)}">
+								<a class="btn btn-dark" href="/unlike/${recipe.id }">Kivétel
+									a kedvencek közül</a>
+							</c:if>
+						</p>
+						<hr>
+					</c:forEach>
+
+					<br> <a class="btn btn-dark" href="/newrecipe">Új recept
+						rögzítése</a>
 
 				</div>
 			</div>

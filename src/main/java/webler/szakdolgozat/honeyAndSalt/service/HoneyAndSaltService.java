@@ -32,6 +32,10 @@ public class HoneyAndSaltService {
 	public Recipe getOne(Long id) {
 		return honeyRepo.getOne(id);
 	}
+	
+	public Recipe getOneByName(String name) {
+		return honeyRepo.findOneByName(name);
+	}
 
 	public void saveRecipe(Recipe recipe) {
 		if (recipe.getId() != null) {

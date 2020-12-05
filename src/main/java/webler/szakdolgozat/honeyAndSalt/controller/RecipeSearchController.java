@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,7 @@ public class RecipeSearchController {
 
 	@GetMapping("/search")
 	public String searchRecipes(Model model) {
+		
 		return "search";
 	}
 
@@ -47,7 +49,6 @@ public class RecipeSearchController {
 		List<Recipe> results = new ArrayList<>();
 		results.addAll(searchService.searchRecipeInstructionsContains(searchText));
 		results.addAll(searchService.searchRecipeNameContains(searchText));
-
 		model.addObject("search", results);
 		return model;
 	}

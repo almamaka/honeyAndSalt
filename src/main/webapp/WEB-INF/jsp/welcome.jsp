@@ -16,55 +16,32 @@
 	<title>Salt And Honey - A hűtőtől a receptkönyvig</title>
 </head>
   <body>
-  
-      <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top" id="navbar">
-        <a class="navbar-brand ml-4" href="mainpage">Honey And Salt</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mr-4">
-              <a class="nav-link" href="mainpage">Főoldal</a>
-            </li>
-            <li class="nav-item mr-4">
-              <a class="nav-link" href="mainpage#search">Receptböngésző</a>
-            </li>
-            <li class="nav-item mr-4">
-              <a class="nav-link" href="favourites">Kedvenc receptek</a>
-            </li>
-            <li class="nav-item dropdown mr-4">
-		       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		         Felhasználói fiók
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                  </form>
-		          <a class="dropdown-item" href="userdata">Adatok</a>
-		          <div class="dropdown-divider"></div>
-		          <button class="dropdown-item btn btn-light btn-lg" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-		       </div>
-		    </li>
-          </ul>
-        </div>
-      </nav>
 	
 	<br/>
 		<div class="container-fluid my-4 mx-3">
-				<div class="row justify-content-center border rounded" id="box">
+			<div class="row justify-content-center border rounded" id="box">
+				<div class="col-12">
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
                     <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         
                     </form>
                      
-                    <h2>Üdvözöllek ${pageContext.request.userPrincipal.name}</h2>
-                    <button class="btn btn-light btn-lg" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
+                    <h3>Üdvözöllek ${pageContext.request.userPrincipal.name}!</h3>
+                    
                     <br>
-                    <a href="mainpage" id="welcome_go" class="next" integrity="">Tovább a receptböngészőbe!</a>
+                    <div class="col-12 justify-content-center">
+                    <h4><a href="mainpage" id="welcome_go" integrity="">Tovább a Salt and Honey - Receptböngészőbe!</a></h4>
+                    
+                    <p><br><strong>Kedves Felhasználók!</strong></p>
+                    <p>Szeretnélek tájékoztatni titeket, hogy a webalkalmazásban jelenleg megtalálható receptek nem saját receptek,
+                    különböző receptkönyvekből és honlapokról lettek lemásolva. A másolt receptek egy-két helyen eltérhetnek az eredetitől.
+                     Minden étel elkészítésének leírása mellett megtalálható, hogy az adott recept honnan került betöltésre. Megértéseteket köszönöm! - a fejlesztő</p>
+                    </div>
+                    <button class="btn btn-dark btn-lg" id="welcome_logout" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
                     </c:if>
                 </div>
+           </div>
                 
 		</div>
 		

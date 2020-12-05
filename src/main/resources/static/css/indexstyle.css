@@ -23,7 +23,7 @@ h3 {
     
 	
     color: rgb(51, 37, 17) !important;
-    background-color: rgba(255, 191, 71, 0.5) !important;
+    background-color: rgba(255, 191, 71, 0.6) !important;
 }
 
 #login {
@@ -38,8 +38,12 @@ input {
 
 .next {
 	font-weight: bold !important;
-	color: rgb(51, 37, 17) !important;
-	font-size: large;
+	color: black !important;
+	font-size: 150%;
+	font-variant: small-caps;
+	color: black;
+	float: right;
+	text-shadow: 1px 1px white;
 }
 
 #registrationbox input {
@@ -49,5 +53,20 @@ input {
 
 #registrationbox label {
 	margin-top: 8px;
+}
+
+#welcome_logout {
+	margin: 20px 20px;
+}
+
+#welcome_go {
+	color: rgb(51, 37, 17);
+	font-weight: bold !important;
+}
+
+#logout_success {
+	color: black;
+	font-variant: small-caps;
+	text-shadow: 2px 2px white;
 }
 

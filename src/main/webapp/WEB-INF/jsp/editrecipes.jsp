@@ -15,7 +15,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
-<title>Salt And Honey - Összes recept</title>
+<title>Salt And Honey - Recept módosítása</title>
 </head>
 <body id="body">
 
@@ -29,67 +29,56 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
+				<li class="nav-item mr-4"><a class="nav-link" href="/mainpage">Főoldal</a>
 				</li>
+				<li class="nav-item mr-4"><a class="nav-link" href="/search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link"
-					href="mainpage#search">Receptböngésző</a></li>
-				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
-						receptek</a></li>
+					href="/favourites">Kedvenc receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Felhasználói fiók </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<form class="form-group text-center py-2" id="logoutForm"
-							method="POST" action="${contextPath}/logout">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</form>
+
 						<a class="dropdown-item" href="userdata">Adatok</a>
 						<div class="dropdown-divider"></div>
 						<button class="dropdown-item btn btn-light btn-lg"
 							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-					</div></li>
+
+
+					</div>
+					<form class="form-group text-center py-2" id="logoutForm"
+						method="POST" action="${contextPath}/logout">
+						<input type="hidden" name="${_csrf.parameterName}"
+							value="${_csrf.token}" />
+					</form></li>
 			</ul>
 		</div>
 	</nav>
 
-	<section class="bg justify-content-center">
-		<div class="container p-4 rounded border" id="leadbox">
-			<div class="text">
-				<h1 class="display-3">Salt And Honey - A hűtőtől a
-					receptkönyvig</h1>
-				<p class="lead" id="lead">Keress alapanyagokra! Keress diétád
-					szerint! Mentsd el kedvenced!</p>
-				<button id="go" class="btn btn-light btn-lg">Indulás!</button>
-			</div>
-		</div>
-	</section>
 
 	<section class="mt-5">
-		<div class="container" id="bigbox">
-			<br> <br>
-			<h2 class="text-left display-5 mx-1">Receptböngésző</h2>
+		<div class="container-fluid my-4 mx-3" id="bigbox">
+			<br>
+			<h2>Recept módosítása</h2>
 			<hr>
 			<div class="row justify-content-center">
 				<div class="col-12 mt-1">
-
-					<div class="p-3 md-form mt-0">
-						<input class="form-control" type="text" placeholder="Böngéssz..."
-							aria-label="Search">
-					</div>
-					<h1>Összes recept</h1>
-
-					<form action="/edit" method="post">
-						<input type="hidden" value="${recipe.id }" name="id" /> <span>Recept
-							neve: </span> <input name="name" type="text" value="${recipe.name }" /><br>
-						<span>Előkészítési idő: </span> <input name="prepTime"
-							type="number" value="${recipe.prepTime }" /><br> <span>Elkészítési
+					<form id="editform" class="form-group text-center py-2 rounded"
+						action="/edit" method="post">
+						<input class="form-control pt-3 pb-3 mx-2" type="hidden"
+							value="${recipe.id }" name="id" /> <span>Recept neve: </span> <input
+							name="name" type="text" value="${recipe.name }" /><br> <span>Előkészítési
+							idő: </span> <input name="prepTime" type="number"
+							value="${recipe.prepTime }" /><br> <span>Elkészítési
 							idő: </span> <input name="cookTime" type="number"
 							value="${recipe.cookTime }" /><br> <span>Elkészítés:
-						</span> <textarea name="instructions" rows="10" cols="40">${recipe.instructions }</textarea><br>
-						<button type="submit">Elküld</button>
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+						</span>
+						<textarea name="instructions" rows="10" cols="40">${recipe.instructions }</textarea>
+						<br>
+						<button class="btn btn-dark" type="submit">Módosít</button>
+						<input class="form-control pt-3 pb-3 mx-2" type="hidden"
+							name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</form>
 				</div>
 			</div>

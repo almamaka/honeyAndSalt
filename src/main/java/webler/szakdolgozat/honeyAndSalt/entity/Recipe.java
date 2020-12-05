@@ -22,6 +22,7 @@ public class Recipe {
 	private String name;
 	private Integer prepTime;
 	private Integer cookTime;
+	private String img;
 	
 	@Column(length = 5000)
 	private String instructions;
@@ -84,4 +85,13 @@ public class Recipe {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
+	
+	public String getImg() {
+		return img;
+	}
+	
+	public void setImg(String img) {
+		this.img = img;
+	}
+	
 }

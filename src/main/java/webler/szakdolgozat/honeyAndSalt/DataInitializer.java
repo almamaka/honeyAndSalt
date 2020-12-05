@@ -45,7 +45,8 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r.setInstructions("<p>Gluténmentes recept. A burgonyát, sárgarépát és a hagymát megtisztítjuk és lereszeljük. Hozzáadjuk a fűszereket és a tojásokat."
 				+ "Sütőpapírral bélelt tepsibe öntjük a masszát. 170 °C előmelegített sütőben szép aranyszínűre sütjük."
 				+ "Ha megsült, felkockázzuk. A kockákat megkenjük a sajtkrémmel."
-				+ "A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p>");
+				+ "A sajtkrémre ráfektetjük a felvágottat. Minden kockára teszünk. Arra a spenótlevelek. Arra a gombaszeletek. De csak 6 kockára teszünk gombát. Ahogy a képen látható. A gombásokra tesszük a lapka sajtokat is. Végül összefordítjuk a kockákat. A tetejére teszünk 1-1 szelet felvágottat még és megszórjuk reszelt sajttal. Visszatesszük a sütőbe még annyi időre, hogy a sajt szép aranybarna legyen rajta.</p><p> ~ https://cookpad.com/</p>");
+		r.setImg("img/tocsni.jpg");
 		
 		Ingredients i = new Ingredients();
 		i.setName("1,5 kg burgonya");
@@ -124,6 +125,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 				"A tésztából formázzunk kis zsemléket, és hagyjuk őket állni letakarva körülbelül 8 órán át." + 
 				"Miután megkeltek a tészták, nyújtsuk ki őket kerek pizza formára, és helyezzük rájuk a feltéteket." + 
 				"220-250 fokon előmelegített sütőben készre sütjük.</p> <div id='forras'>~ forrás: nosalty.hu</div>");
+		r2.setImg("img/pizzateszta.jpg");
 		
 		Ingredients r2i = new Ingredients();
 		r2i.setName("1 kg liszt");
@@ -155,6 +157,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r3.setInstructions("<p>A burgonyát megpucolom, majd kis kockákra vágom. A fokhagymát fokhagymanyomón átnyomom és a vajon kicsit megpirítom (világosra).</p>" + 
 				"<p>Majd felöntöm alaplével, hozzáadom a kockára vágott burgonyát is. Sózom és addig főzöm, amíg a burgonya puha nem lesz (15 perc után kóstolom). Ha puha a krumpli, akkor botmixerrel pürésítem.</p>" + 
 				"<p>Pirított kenyérkockával tálalom.</p> <div id='forras'>forrás: cookpad.com</div>");
+		r3.setImg("img/fokhagymakremleves.jpg");
 		
 		Ingredients r3i = new Ingredients();
 		r3i.setName("6 gerezd fokhagyma");
@@ -182,6 +185,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r3.getIngredients().add(r3i4);
 		r3.getIngredients().add(r3i5);
 
-		honeyrepo.save(r2);
+		honeyrepo.save(r3);
 	}
 }
