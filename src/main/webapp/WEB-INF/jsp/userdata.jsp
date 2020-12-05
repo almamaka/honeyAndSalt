@@ -31,22 +31,24 @@
             <li class="nav-item mr-4">
               <a class="nav-link" href="favourites">Kedvenc receptek</a>
             </li>
-            <li class="nav-item dropdown mr-4">
-		       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		         Felhasználói fiók
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        
-		          <a class="dropdown-item" href="userdata">Adatok</a>
-		          <div class="dropdown-divider"></div>
-		          <button class="dropdown-item btn btn-light btn-lg" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-		       
-		       
-                  </div>
-                  <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                  </form>
-		    </li>
+				<li id="dropdownli" class="nav-item dropdown mr-4"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Felhasználói fiók </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="userdata">Adatok</a>
+						<div class="dropdown-divider"></div>
+						<form class="form-group text-center py-2" id="logoutForm"
+							method="POST" action="${contextPath}/logout">
+							<input type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+						</form>
+						<button class="dropdown-item btn btn-light btn-lg"
+							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
+
+
+					</div></li>
           </ul>
         </div>
       </nav>
