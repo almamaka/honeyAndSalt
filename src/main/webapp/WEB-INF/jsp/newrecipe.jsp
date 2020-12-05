@@ -1,8 +1,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
-<title>Salt And Honey - Kedvenc receptek</title>
+<title>Salt And Honey - Recept hozzáadása</title>
 </head>
 <body id="body">
 
@@ -30,11 +29,11 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
+				<li class="nav-item mr-4"><a class="nav-link" href="/mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link" href="search">Receptböngésző</a></li>
-				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
-						receptek</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" href="/search">Receptböngésző</a></li>
+				<li class="nav-item mr-4"><a class="nav-link"
+					href="/favourites">Kedvenc receptek</a></li>
 				<li id="dropdownli" class="nav-item dropdown mr-4"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -58,34 +57,33 @@
 	</nav>
 
 
-
 	<section class="mt-5">
-		<div class="container" id="bigbox">
+		<div class="container-fluid my-4 mx-3" id="bigbox">
 			<br>
+			<h2>Recept hozzáadása</h2>
+			<hr>
 			<div class="row justify-content-center">
 				<div class="col-12 mt-1">
-					<h2 class="text-left display-5 mx-1">Kedvenc receptjeim</h2>
-					<hr>
-					<div class="row">
-						<c:forEach var="recipe" items="${recipes}">
-							<div class="col-lg-4">
-
-
-								<div class="card mb-3">
-									<img class="card-img-top" src="${recipe.img}"
-										alt="${recipe.name}">
-									<div class="card-body">
-										<h5 class="card-title">${recipe.name}</h5>
-										<p class="card-text">A részletekért kattints a gombra...</p>
-										<a id="details" class="btn btn-dark" href="/${recipe.name }">Megnézem!</a>
-									</div>
-								</div>
-
-
-							</div>
-						</c:forEach>
-					</div>
-
+					<form id="newform" class="form-group text-center py-2 rounded"
+						action="/newrecipe" method="post">
+						<input class="form-control pt-3 pb-3 mx-2" type="hidden"
+							value="${recipe.id }" name="id" /> <span>Recept neve: </span> <input
+							name="name" type="text" /><br> <span>Előkészítési
+							idő: </span> <input name="prepTime" type="number"
+							 /><br> <span>Főzési/sütési idő: </span> <input name="cookTime" type="number"
+							 /><br> <span>Elkészítés:
+						</span>
+						<textarea name="instructions" rows="10" cols="40"></textarea>
+						<br>
+						<span>Recept képének neve (pl. "img/kepnev.jpg"): </span> <input
+							name="img" type="text" /><br>
+						
+						<button class="btn btn-dark" type="submit">Új recept felvétele</button>
+						
+						<input class="form-control pt-3 pb-3 mx-2" type="hidden"
+							name="${_csrf.parameterName}" value="${_csrf.token}" />
+							
+					</form>
 				</div>
 			</div>
 		</div>

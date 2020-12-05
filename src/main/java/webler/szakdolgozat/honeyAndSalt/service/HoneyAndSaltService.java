@@ -44,6 +44,7 @@ public class HoneyAndSaltService {
 			original.setCookTime(recipe.getCookTime());
 			original.setPrepTime(recipe.getPrepTime());
 			original.setInstructions(recipe.getInstructions());
+			original.setImg(recipe.getImg());
 			recipe = original;
 		}
 		
