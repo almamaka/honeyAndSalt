@@ -25,8 +25,9 @@ public class User {
     @Transient
     private String passwordConfirm;
 
-    @ManyToMany
-    private Set<Role> roles;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "role_user")
+    private List<Role> roles;
     
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "recipe_user")
@@ -82,11 +83,16 @@ public class User {
 		this.likedRecipes = likedRecipes;
 	}
 
-	public Set<Role> getRoles() {
-        return roles;
-    }
+	public List<Role> getRoles() {
+		if (roles == null){
+			roles = new ArrayList<>();
+		}
+		return roles;
+	}
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+
+
 }
