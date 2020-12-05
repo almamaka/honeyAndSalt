@@ -100,7 +100,11 @@ img {
 	font-weight: bold;
 }
 
-.card-text {
+.card-body {
 	color: black;
+	text-shadow: none;
 }
 
+.card-title {
+	font-weight: bold;
+}

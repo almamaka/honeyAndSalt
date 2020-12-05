@@ -37,7 +37,12 @@ public class ListController {
 	
 	@GetMapping("/list/{name}")
 	public String viewEditRecipe(Model model, @PathVariable("name") String name) {
+		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() == null) {
+			return "redirect:/index";
+		}
+		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
 		model.addAttribute("recipes", searchService.searchRecipeByName(name));
+		model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
 		System.out.println(searchService.searchRecipeByName(name));
 		
 		return "listrecipes";

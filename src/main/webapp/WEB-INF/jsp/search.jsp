@@ -56,34 +56,28 @@
 	</nav>
 	<section class="mt-5">
 		<div class="container" id="resultbox">
+		<br>
 			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
+			<hr>
+			<div class="row">
 			<c:forEach var="searchResults" items="${search}">
-				<div class="card col-4">
-					<img class="card-img-top" src="${searchResults.img}" alt="${searchResults.name}">
-					<div class="card-body">
-						<h5 class="card-title">${searchResults.name}</h5>
-						<p class="card-text">A részletekért kattints a gombra...</p>
-						<a href="/list/${searchResults.name }">Megnézem!</a>
-					</div>
+				<div class="col-lg-4">
+					
+
+						<div class="card">
+							<img class="card-img-top" src="${searchResults.img}"
+								alt="${searchResults.name}">
+							<div class="card-body">
+								<h5 class="card-title">${searchResults.name}</h5>
+								<p class="card-text">A részletekért kattints a gombra...</p>
+								<a id="details" class="btn btn-dark" href="/list/${searchResults.name }">Megnézem!</a>
+							</div>
+						</div>
+
+					
 				</div>
-				<hr>
-				<a href="/list/${searchResults.name }">${searchResults.name}</a>
-				<p id="result_name">${searchResults.name}</p>
-				<p>${searchResults.instructions}</p>
-				<img src="${searchResults.img}" alt="${searchResults.name}">
-				<p>
-					<strong>Elkészítési idő: </strong>${searchResults.prepTime}</p>
-				<p>
-					<strong>Sütési/főzési idő: </strong>${searchResults.cookTime}</p>
-				<c:forEach var="ingredients" items="${searchResult.ingredients}">
-					<ul>
-						<li>${ingredients.name }</li>
-					</ul>
 				</c:forEach>
-
-			</c:forEach>
-
-
+			</div>
 		</div>
 	</section>
 	<section class="mt-5">
@@ -101,6 +95,7 @@
 							<input class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..."
 								aria-label="Search">
+							<br>
 							<button type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
@@ -113,6 +108,7 @@
 							id="searchIngredients">
 							<input class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz összetevők szerint..." aria-label="Search">
+							<br>
 							<button type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"

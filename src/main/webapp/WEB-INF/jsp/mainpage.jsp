@@ -53,7 +53,7 @@
             <div class="text">
                 <h1 class="display-3">Salt And Honey - A hűtőtől a receptkönyvig</h1>
                 <p class="lead" id="lead">Keress alapanyagokra! Keress diétád szerint! Mentsd el kedvenced!</p>
-                <button id="#search" class="btn btn-light btn-lg">Indulás!</button>
+                <button id="#search" class="btn btn-dark btn-lg">Indulás!</button>
             </div>
         </div>
     </section>
@@ -71,7 +71,7 @@
                 <p>Ha diétád alapján keresnél, keress rá az adott alapanyag mentességre! Például: gluténmentes, laktózmentes, stb.</p>
                 <input class="form-control" type="text" name="searchText" placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..." aria-label="Search">
                 <br>
-                <button type="submit" name="search" class="btn btn-light" id="btn" integrity="">Keresés</button>
+                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
               </div>
@@ -80,7 +80,7 @@
                 <p>Keress receptekre az összetevőik alapján! Egyszerre csak egy alapanyagra tudsz keresni.</p>
                 <input class="form-control" type="text" name="searchText" placeholder="Böngéssz összetevők szerint..." aria-label="Search">
                 <br>
-                <button type="submit" name="search" class="btn btn-light" id="btn" integrity="">Keresés</button>
+                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
                 <a href="listrecipes" class="next" integrity="">Nézd meg az összes receptet!<br></a>
