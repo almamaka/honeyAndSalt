@@ -59,8 +59,9 @@
 	<section class="mt-5">
 		<div class="container" id="resultbox">
 			<br>
+			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
 			<c:forEach var="ingredientResults" items="${search}">
-				<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
+				
 				<hr>
 				<p>
 					Találat: <strong>${ingredientResults.name} </strong>alapanyag

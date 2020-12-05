@@ -2,10 +2,13 @@ package webler.szakdolgozat.honeyAndSalt.entity;
 
 import javax.persistence.*;
 
+import lombok.ToString;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+@ToString(exclude = {"password", "likedRecipes"})
 @Entity
 @Table(name = "user")
 public class User {
