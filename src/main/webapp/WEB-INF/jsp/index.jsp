@@ -20,26 +20,27 @@
 				<div class="row justify-content-center border rounded" id="box">
 					<div class="col-12">
 					<br>
+					<span id="logout_success">${ message}</span>
 					<h3 class="p2">Kedves receptböngésző! Kérlek, jelentkezz be!</h3>
 					<form action="/" method="post" class="form-group text-center py-2 rounded ${error != null ? 'has-error' : ''}" id="login">
-							<span>${ message}</span>
+							
 							<label for="">Felhasználónév</label>
 							<input type="text" name="username" id="username" class="form-control pt-3 pb-3 mx-2"/>
 						
 							<label for="">Jelszó</label>
 							<input type="password" name="password" id="pwd" class="form-control pt-3 pb-3 mx-2"/>
-							<span>${ error}</span>
+							<button type="submit" class="btn btn-dark" id="btn" integrity="">Bejelentkezés</button>
+							<span class="text-light bg-danger" id="error"><br><br> ${ error} </span>
+							
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+						<br>
 						
-						<button type="submit" class="btn btn-dark" id="btn" integrity="">Bejelentkezés</button>
 					</form>
 					</div>
 				</div>
 			
-				<a href="registration" class="next" integrity="">Regisztrálj!<br></a>
-				<a href="listrecipes" class="next" integrity="">Összes recept<br></a>
-				<a href="mainpage" class="next" integrity="">Vagy lépj tovább a receptböngészőbe...</a>  
-		</div>
+				<a href="registration" class="next" integrity="">Nincs még felhasználód? Regisztrálj!<br></a>
+				</div>
 		
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

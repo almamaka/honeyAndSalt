@@ -31,14 +31,14 @@
                     
                     <br>
                     <div class="col-12 justify-content-center">
-                    <h4><a href="mainpage" id="welcome_go" class="next" integrity="">Tovább a Salt and Honey - Receptböngészőbe!</a></h4>
+                    <h4><a href="mainpage" id="welcome_go" integrity="">Tovább a Salt and Honey - Receptböngészőbe!</a></h4>
                     
                     <p><br><strong>Kedves Felhasználók!</strong></p>
                     <p>Szeretnélek tájékoztatni titeket, hogy a webalkalmazásban jelenleg megtalálható receptek nem saját receptek,
                     különböző receptkönyvekből és honlapokról lettek lemásolva. A másolt receptek egy-két helyen eltérhetnek az eredetitől.
                      Minden étel elkészítésének leírása mellett megtalálható, hogy az adott recept honnan került betöltésre. Megértéseteket köszönöm! - a fejlesztő</p>
                     </div>
-                    <button class="btn btn-light btn-lg" id="welcome_logout" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
+                    <button class="btn btn-dark btn-lg" id="welcome_logout" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
                     </c:if>
                 </div>
            </div>
