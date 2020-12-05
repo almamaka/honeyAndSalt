@@ -53,13 +53,13 @@
             <div class="text">
                 <h1 class="display-3">Salt And Honey - A hűtőtől a receptkönyvig</h1>
                 <p class="lead" id="lead">Keress alapanyagokra! Keress diétád szerint! Mentsd el kedvenced!</p>
-                <button id="#search" class="btn btn-dark btn-lg">Indulás!</button>
+                <a href="mainpage#search" class="btn btn-dark btn-lg">Indulás!</a>
             </div>
         </div>
     </section>
-
-    <section class="mt-5">
-      <div name="#search" class="container" id="bigbox">
+	
+    <section name="#search" class="mt-5">
+      <div class="container" id="bigbox">
           <h2 class="text-left display-5 mx-1">Receptböngésző</h2>
           <hr>
           <div class="row justify-content-center">

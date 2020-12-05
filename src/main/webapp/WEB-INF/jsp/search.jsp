@@ -70,7 +70,7 @@
 							<div class="card-body">
 								<h5 class="card-title">${searchResults.name}</h5>
 								<p class="card-text">A részletekért kattints a gombra...</p>
-								<a id="details" class="btn btn-dark" href="/list/${searchResults.name }">Megnézem!</a>
+								<a id="details" class="btn btn-dark" href="/${searchResults.name }">Megnézem!</a>
 							</div>
 						</div>
 

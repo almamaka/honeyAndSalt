@@ -35,7 +35,7 @@ public class ListController {
 		return "listrecipes";
 	}
 	
-	@GetMapping("/list/{name}")
+	@GetMapping("/{name}")
 	public String viewEditRecipe(Model model, @PathVariable("name") String name) {
 		if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() == null) {
 			return "redirect:/index";

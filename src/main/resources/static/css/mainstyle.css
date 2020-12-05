@@ -35,12 +35,6 @@ body {
 
 }
 
-#go {
-
-    color: rgb(53, 19, 105);
-
-}
-
 a {
     color: rgb(255, 255, 255);
 }
@@ -87,6 +81,13 @@ img {
   	width: 100% !important;
 }
 
+#list_img {
+	border-radius: 8px;
+	border: 5px black !important;
+	padding: 5px;
+  	width: 40% !important;
+}
+
 .next {
 	color: black;
 	font-variant: small-caps;
@@ -100,6 +101,13 @@ img {
 	font-weight: bold;
 }
 
+#recipe_title {
+	color: black;
+	font-weight: bold;
+	font-size: 150%;
+	padding-left: 25px;
+}
+
 .card-body {
 	color: black;
 	text-shadow: none;
@@ -107,4 +115,8 @@ img {
 
 .card-title {
 	font-weight: bold;
+}
+
+.btn-dark {
+	text-shadow: none;
 }
