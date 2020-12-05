@@ -1,5 +1,6 @@
 package webler.szakdolgozat.honeyAndSalt.service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +52,7 @@ public class UserServiceImplementation implements UserService, Validator {
     @Override
     public void save(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setRoles(new HashSet<>(roleRepository.findAll()));
+        user.setRoles(new ArrayList<>(roleRepository.findAll()));
         userRepository.save(user);
     }
 

@@ -33,6 +33,8 @@ public class HoneyAndSaltSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
                 .antMatchers("/resources/**", "/registration").permitAll()
                 .antMatchers("/css/**").permitAll()
+                .antMatchers("/")
+                	.access("hasRole('user') or hasRole('admin')")
                 .anyRequest().authenticated()
                 .and()
             .formLogin()

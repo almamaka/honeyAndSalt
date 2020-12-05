@@ -36,6 +36,11 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		u.setUsername("almamaka");
 		u.setPassword(passEncoder.encode("11111111"));
 		
+		Role role = new Role();
+		role.setName("admin");
+		role.getUsers().add(u);
+
+		u.getRoles().add(role);
 		userRepo.save(u);	
 			
 		Recipe r = new Recipe();
