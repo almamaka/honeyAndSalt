@@ -68,43 +68,20 @@
           <hr>
           <div class="row justify-content-center">
             <div class="col-12 mt-1">
-              
+
               <div class="p-3 md-form mt-0">
               <form action="/search" method="post" class="form-group text-center py-2 rounded" id="search">
-                <input class="form-control" type="text" name="searchText" placeholder="Böngéssz..." aria-label="Search">
+                <input class="form-control" type="text" name="searchText" placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..." aria-label="Search">
                 <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
               </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Gluténmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Cukormentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Tejmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Laktózmentes
-                </label>
-              </div>
-              <div class="col-2 form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                  Alkoholmentes
-                </label>
+              <div class="p-3 md-form mt-0">
+              <form action="/searchingredients" method="post" class="form-group text-center py-2 rounded" id="searchIngredients">
+                <input class="form-control" type="text" name="searchText" placeholder="Böngéssz összetevők szerint..." aria-label="Search">
+                <button type="submit" name="search" class="btn btn-dark" id="btn" integrity="">Keresés</button>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </form>
               </div>
 
               <div class="col-12 mt-4">
@@ -120,7 +97,7 @@
 
               <div class="col-12  mt-4">
                   <a name="account"></a>
-                  <h3 id="title3">lol</h3>
+                  <h3 id="title3"></h3>
                   <hr>
                   <div id="fegyver_leiras">
                       <div class="row">

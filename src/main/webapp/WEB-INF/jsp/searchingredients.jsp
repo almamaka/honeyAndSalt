@@ -49,14 +49,16 @@
       </nav>
       <section class="mt-5">
       <div class="container" id="resultbox">
-			<c:forEach var="searchResults" items="${search}">
+			<c:forEach var="ingredientResults" items="${search}">
 			    <h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
           		<hr>
-				<p>${searchResults.name}</p>
-				<p>${searchResults.instructions}</p>
+				<p>Találat: <strong>${ingredientResults.name} </strong>alapanyag alapján</p>
+				<hr>
+				<p>${ingredientResults.recipe.name}</p>
+				<p>${ingredientResults.recipe.instructions}</p>
 	
 			</c:forEach>
-
+			
 	</div>
 	</section>
 	<section class="mt-5">
