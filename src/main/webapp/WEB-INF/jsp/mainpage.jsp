@@ -36,13 +36,16 @@
 		         Felhasználói fiók
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                  </form>
+		        
 		          <a class="dropdown-item" href="userdata">Adatok</a>
 		          <div class="dropdown-divider"></div>
 		          <button class="dropdown-item btn btn-light btn-lg" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-		       </div>
+		       
+		       
+                  </div>
+                  <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                  </form>
 		    </li>
           </ul>
         </div>

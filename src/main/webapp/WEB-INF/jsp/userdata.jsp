@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" type="text/css"  href="/css/mainstyle.css">
-<title>Salt And Honey - Főoldal</title>
+<title>Salt And Honey - Felhasználói adatok</title>
 </head>
 <body id="body">
 
@@ -36,19 +36,34 @@
 		         Felhasználói fiók
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                  </form>
+		        
 		          <a class="dropdown-item" href="userdata">Adatok</a>
 		          <div class="dropdown-divider"></div>
 		          <button class="dropdown-item btn btn-light btn-lg" onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-		       </div>
+		       
+		       
+                  </div>
+                  <form class="form-group text-center py-2" id="logoutForm" method="POST" action="${contextPath}/logout">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                  </form>
 		    </li>
           </ul>
         </div>
       </nav>
-	<section>
-	
+	<section class="mt-5">
+	<div class="container" id="bigbox">
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-12 mt-1">
+
+					<h2 class="text-left display-5 mx-1">Felhasználói adatok</h2>
+					<hr>
+
+						<p><strong>Felhasználónév: </strong>${user.username }</p>
+						<p><strong>E-mail cím: </strong>${user.email }</p>
+				</div>
+				</div>
+				</div>
 	</section>
 
 </body>

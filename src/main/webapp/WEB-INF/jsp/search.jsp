@@ -32,8 +32,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link"
-					href="search">Receptböngésző</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -41,28 +40,31 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Felhasználói fiók </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<form class="form-group text-center py-2" id="logoutForm"
-							method="POST" action="${contextPath}/logout">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</form>
+
 						<a class="dropdown-item" href="userdata">Adatok</a>
 						<div class="dropdown-divider"></div>
 						<button class="dropdown-item btn btn-light btn-lg"
 							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-					</div></li>
+
+
+					</div>
+					<form class="form-group text-center py-2" id="logoutForm"
+						method="POST" action="${contextPath}/logout">
+						<input type="hidden" name="${_csrf.parameterName}"
+							value="${_csrf.token}" />
+					</form></li>
 			</ul>
 		</div>
 	</nav>
 	<section class="mt-5">
 		<div class="container" id="resultbox">
-		<br>
+			<br>
 			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
 			<hr>
 			<div class="row">
-			<c:forEach var="searchResults" items="${search}">
-				<div class="col-lg-4">
-					
+				<c:forEach var="searchResults" items="${search}">
+					<div class="col-lg-4">
+
 
 						<div class="card">
 							<img class="card-img-top" src="${searchResults.img}"
@@ -70,12 +72,13 @@
 							<div class="card-body">
 								<h5 class="card-title">${searchResults.name}</h5>
 								<p class="card-text">A részletekért kattints a gombra...</p>
-								<a id="details" class="btn btn-dark" href="/${searchResults.name }">Megnézem!</a>
+								<a id="details" class="btn btn-dark"
+									href="/${searchResults.name }">Megnézem!</a>
 							</div>
 						</div>
 
-					
-				</div>
+
+					</div>
 				</c:forEach>
 			</div>
 		</div>
@@ -94,8 +97,7 @@
 							class="form-group text-center py-2 rounded" id="search">
 							<input class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..."
-								aria-label="Search">
-							<br>
+								aria-label="Search"> <br>
 							<button type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"

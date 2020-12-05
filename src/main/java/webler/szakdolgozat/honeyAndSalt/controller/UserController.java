@@ -1,6 +1,7 @@
 package webler.szakdolgozat.honeyAndSalt.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -52,6 +53,16 @@ public class UserController {
     @GetMapping({"/welcome"})
     public String welcome(Model model) {
         return "welcome";
+    }
+    
+    @GetMapping("/userdata") 
+    public String userDataShow(Model model) {
+    	if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() == null) {
+			return "redirect:/index";
+		}
+		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
+		model.addAttribute("user", userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName()));
+    	return "userdata";
     }
 }
 

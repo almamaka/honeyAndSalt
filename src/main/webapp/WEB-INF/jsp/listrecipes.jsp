@@ -31,8 +31,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
 				</li>
-				<li class="nav-item mr-4"><a class="nav-link"
-					href="search">Receptböngésző</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" href="search">Receptböngésző</a></li>
 				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
 						receptek</a></li>
 				<li class="nav-item dropdown mr-4"><a
@@ -40,16 +39,19 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Felhasználói fiók </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<form class="form-group text-center py-2" id="logoutForm"
-							method="POST" action="${contextPath}/logout">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</form>
+
 						<a class="dropdown-item" href="userdata">Adatok</a>
 						<div class="dropdown-divider"></div>
 						<button class="dropdown-item btn btn-light btn-lg"
 							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
-					</div></li>
+
+
+					</div>
+					<form class="form-group text-center py-2" id="logoutForm"
+						method="POST" action="${contextPath}/logout">
+						<input type="hidden" name="${_csrf.parameterName}"
+							value="${_csrf.token}" />
+					</form></li>
 			</ul>
 		</div>
 	</nav>
@@ -63,7 +65,7 @@
 				<div class="col-12 mt-1">
 
 					<h2 class="text-left display-5 mx-1">Recept listázó</h2>
-
+					<hr>
 
 					<c:forEach var="recipe" items="${recipes}">
 
@@ -84,9 +86,9 @@
 						<p>
 							<c:forEach var="ingredients" items="${recipe.ingredients}">
 					${ingredients.name }, </c:forEach>
-						</p>
 						<p>
-							<strong id="result_name">Kedvencnek jelölte:</strong>
+							<strong id="resu
+						lt_name">Kedvencnek jelölte:</strong>
 							<c:forEach var="user" items="${recipe.users}">
 					${user.username } <br>
 							</c:forEach>

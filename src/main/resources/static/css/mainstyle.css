@@ -45,6 +45,15 @@ a {
     transition: 1.5s linear !important;
 }
 
+.dropdown-menu {
+	background: rgb(170, 62, 48) !important;
+}
+
+.dropdown-item {
+	color: rgb(255, 255, 255) !important;
+    text-shadow: 3px 3px rgb(61, 50, 30) !important;
+}
+
 h1 {
     font-weight: bold !important; 
     text-shadow: 6px 6px rgb(191, 155, 94);
@@ -119,4 +128,16 @@ img {
 
 .btn-dark {
 	text-shadow: none;
+}
+
+#editform input {
+	margin: 10px 10px;
+	display: inline-block !important;
+	border-radius: 8px;
+}
+
+textarea {
+	margin: 10px 10px;
+	display: inline-block !important;
+	border-radius: 8px;
 }
