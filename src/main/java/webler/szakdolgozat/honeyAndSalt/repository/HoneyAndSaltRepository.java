@@ -14,4 +14,6 @@ public interface HoneyAndSaltRepository extends JpaRepository<Recipe, Long> {
 	List<Recipe> findByName(String recipeName);
 	
 	List<Recipe> findByIngredientsContaining(String infix);
+
+	Recipe findOneByName(String name);
 }

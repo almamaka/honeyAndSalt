@@ -1,20 +1,28 @@
 package webler.szakdolgozat.honeyAndSalt.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
+import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
 import webler.szakdolgozat.honeyAndSalt.entity.User;
 import webler.szakdolgozat.honeyAndSalt.service.HoneyAndSaltService;
+import webler.szakdolgozat.honeyAndSalt.service.SearchService;
 
 @Controller
 public class ListController {
 
 	@Autowired
 	private HoneyAndSaltService honeyService;
+	
+	@Autowired
+	private SearchService searchService;
 	
 	@GetMapping("/listrecipes")
 	public String listRecipes(Model model) {
@@ -24,6 +32,14 @@ public class ListController {
 		System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
 		model.addAttribute("recipes", honeyService.getAll());
 		model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
+		return "listrecipes";
+	}
+	
+	@GetMapping("/list/{name}")
+	public String viewEditRecipe(Model model, @PathVariable("name") String name) {
+		model.addAttribute("recipes", searchService.searchRecipeByName(name));
+		System.out.println(searchService.searchRecipeByName(name));
+		
 		return "listrecipes";
 	}
 }
