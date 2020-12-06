@@ -16,8 +16,8 @@ public class WelcomePage extends BasePage{
 	
 	By enterButton = By.xpath("//div/c:if/h4/a[@id='welcome_go']");
 	
-	public void clickOnEnterRecipeBrowser() {
-		waitFindElement(welcomeEnterButton);
+	public void clickOnEnterRecipeBrowser() throws InterruptedException {
+		Thread.sleep(1000);
 		waitAndClick(welcomeEnterButton);
 	}
 	

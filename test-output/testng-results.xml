@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11599" started-at="2020-12-06T16:32:28 CET" finished-at="2020-12-06T16:32:40 CET">
+  <suite name="Default suite" duration-ms="16187" started-at="2020-12-06T16:58:08 CET" finished-at="2020-12-06T16:58:24 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11599" started-at="2020-12-06T16:32:28 CET" finished-at="2020-12-06T16:32:40 CET">
+    <test name="Default test" duration-ms="16187" started-at="2020-12-06T16:58:08 CET" finished-at="2020-12-06T16:58:24 CET">
       <class name="webler.szakdolgozat.honeyAndSalt.UseCaseTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@a74868d]" name="setUp" is-config="true" duration-ms="5808" started-at="2020-12-06T16:32:28 CET" finished-at="2020-12-06T16:32:34 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@a74868d]" name="setUp" is-config="true" duration-ms="5866" started-at="2020-12-06T16:58:08 CET" finished-at="2020-12-06T16:58:14 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="favouriteTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@a74868d]" name="favouriteTest" duration-ms="5762" started-at="2020-12-06T16:32:34 CET" finished-at="2020-12-06T16:32:40 CET">
+        <test-method status="PASS" signature="favouriteTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@a74868d]" name="favouriteTest" duration-ms="10288" started-at="2020-12-06T16:58:14 CET" finished-at="2020-12-06T16:58:24 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- favouriteTest -->

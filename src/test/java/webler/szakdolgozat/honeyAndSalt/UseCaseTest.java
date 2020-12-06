@@ -46,14 +46,25 @@ public class UseCaseTest extends BaseTest {
 		loginpage.goTo();
 		loginpage.clickOnRegistrationButton();
 		Thread.sleep(1000);
-		registrationpage.typeIntoUsernameField("felhasználó2");
-		registrationpage.typeIntoEmailField("valaki@calami.hu");
-		//registrationpage.keysIntoEmailField();
+		registrationpage.typeIntoUsernameField("felhasználó1");
+		registrationpage.keysIntoEmailField("valami@valami.hu");
 		registrationpage.typeIntoPasswordField("12345678");
 		registrationpage.typeIntoPasswordConfirmField("12345678");
 		registrationpage.clickOnRegistrationButton();
-		welcomepage.clickOnEnterRecipeBrowser();
 		Assert.assertTrue(welcomepage.assertWelcomeTextIsDisplayed());
+		if (welcomepage.assertWelcomeTextIsDisplayed() == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
+		welcomepage.clickOnEnterRecipeBrowser();
+		navpage.clickOnLogoutButton();
+		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
+		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
 	}
 	
 	@Test
@@ -70,7 +81,16 @@ public class UseCaseTest extends BaseTest {
 			System.out.println("Sikeres assert");
 		} else {
 			System.out.println("Sikertelen assert");
-		}		
+		}
+		searchpage.clickOnDetailsButton();
+		listrecipepage.clickOnUnlikeButton();
+		navpage.clickOnLogoutButton();
+		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
+		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
 	}
 	
 	@Test
@@ -88,7 +108,15 @@ public class UseCaseTest extends BaseTest {
 			System.out.println("Sikeres assert");
 		} else {
 			System.out.println("Sikertelen assert");
-		}		
+		}
+		listrecipepage.clickOnDeleteButton();
+		navpage.clickOnLogoutButton();
+		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
+		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
 	}
 	
 	@Test
@@ -116,6 +144,13 @@ public class UseCaseTest extends BaseTest {
 		searchpage.typeIntoSearchInstructionsAndNameField("liszt");
 		searchpage.clickOnSearchInstructionsAndNameButton();
 		searchpage.clickOnDetailsButton();
+		navpage.clickOnLogoutButton();
+		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
+		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
 	}
 
 }

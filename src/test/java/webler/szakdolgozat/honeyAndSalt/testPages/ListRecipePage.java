@@ -12,10 +12,11 @@ public class ListRecipePage extends BasePage {
 	private By modifyButton = By.xpath("//a[@href = '/edit/1']");
 	private By deleteButton = By.xpath("//a[@href = '/delete/1']");
 	private By likeButton = By.xpath("//a[@href = '/like/1']");
+	private By unlikeButton = By.xpath("//a[@href = '/unlike/1']");
 	
 	private By preptimeField = By.name("prepTime");
 	
-	private By modifySaveButton = By.className("btn");
+	private By modifySaveButton = By.id("modifysave");
 	
 	public void clickOnModifyButton() throws InterruptedException {
 		Thread.sleep(1000);
@@ -30,6 +31,11 @@ public class ListRecipePage extends BasePage {
 	public void clickOnLikeButton() throws InterruptedException {
 		Thread.sleep(1000);
 		waitAndClick(likeButton);
+	}
+	
+	public void clickOnUnlikeButton() throws InterruptedException {
+		Thread.sleep(1000);
+		waitAndClick(unlikeButton);
 	}
 	
 	public boolean assertFavourites(String favourite) {

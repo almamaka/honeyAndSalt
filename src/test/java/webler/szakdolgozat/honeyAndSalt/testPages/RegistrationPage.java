@@ -25,19 +25,9 @@ public class RegistrationPage extends BasePage{
 		waitAndType(usernameField, keystosend);
 	}
 	
-	public void keySpecialCharacterEmail(By selector) {
-		action.keyDown(Keys.CONTROL).keyDown(Keys.ALT).sendKeys("v").keyUp(Keys.ALT).keyUp(Keys.CONTROL).build().perform();
-	}
-	
-	public void typeIntoEmailField(String keystosend) {
-		waitAndType(emailField, keystosend.toString());
-		
-		
-	}
-	
-	public void keysIntoEmailField() {
+	public void keysIntoEmailField(String email) {
 		waitAndClick(emailField);
-		action.sendKeys("valami").keyDown(Keys.ALT).sendKeys("v").keyUp(Keys.ALT).sendKeys("valaki.hu").build().perform();
+		action.sendKeys(email).build().perform();
 	}
 	
 	public void typeIntoPasswordField(String keystosend) {
@@ -48,8 +38,8 @@ public class RegistrationPage extends BasePage{
 		waitAndType(passwordConfirmField, keystosend);
 	}
 	
-	public void clickOnRegistrationButton() {
-		waitFindElement(registrationButton);
+	public void clickOnRegistrationButton() throws InterruptedException {
+		Thread.sleep(1000);
 		click(registrationButton);
 	}
 

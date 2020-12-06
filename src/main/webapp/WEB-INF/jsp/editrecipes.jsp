@@ -79,7 +79,10 @@
 						</span>
 						<textarea name="instructions" rows="10" cols="40">${recipe.instructions }</textarea>
 						<br>
-						<button class="btn btn-dark" type="submit">Módosít</button>
+						<span>Kép elérési útvonala (pl. img/kepnev.jpg): </span> <input name="img" type="text"
+							value="${recipe.img }" />
+						<br>
+						<button id="modifysave" class="btn btn-dark" type="submit">Módosít</button>
 						<input class="form-control pt-3 pb-3 mx-2" type="hidden"
 							name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</form>
