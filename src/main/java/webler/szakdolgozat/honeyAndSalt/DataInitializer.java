@@ -23,8 +23,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	@Autowired
 	private UserRepository userRepo;
 	
-	@Autowired
-	private RoleRepository roleRepo;
 	
 	@Autowired
 	private PasswordEncoder passEncoder;

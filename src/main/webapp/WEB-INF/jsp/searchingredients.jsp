@@ -21,7 +21,8 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top"
 		id="navbar">
-		<a class="navbar-brand ml-4" href="mainpage">Honey And Salt</a>
+		<a class="navbar-brand ml-4" id="logobutton" href="mainpage">Honey
+			And Salt</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -29,26 +30,27 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item mr-4"><a class="nav-link" href="mainpage">Főoldal</a>
-				</li>
-				<li class="nav-item mr-4"><a class="nav-link" href="search">Receptböngésző</a>
-				</li>
-				<li class="nav-item mr-4"><a class="nav-link" href="favourites">Kedvenc
-						receptek</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" id="mainpage"
+					href="mainpage">Főoldal</a></li>
+				<li class="nav-item mr-4"><a class="nav-link" id="searchpage"
+					href="search">Receptböngésző</a></li>
+				<li class="nav-item mr-4"><a class="nav-link"
+					id="favouritespage" href="favourites">Kedvenc receptek</a></li>
 				<li id="dropdownli" class="nav-item dropdown mr-4"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Felhasználói fiók </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="userdata">Adatok</a>
+						<a id="userdatapage" class="dropdown-item" href="userdata">Adatok</a>
 						<div class="dropdown-divider"></div>
 						<form class="form-group text-center py-2" id="logoutForm"
 							method="POST" action="${contextPath}/logout">
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
 						</form>
-						<button class="dropdown-item btn btn-light btn-lg"
+						<button id="lougoutbutton"
+							class="dropdown-item btn btn-light btn-lg"
 							onclick="document.forms['logoutForm'].submit()" integrity="">Kijelentkezés</button>
 
 
@@ -61,7 +63,7 @@
 			<br>
 			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
 			<c:forEach var="ingredientResults" items="${search}">
-				
+
 				<hr>
 				<p>
 					Találat: <strong>${ingredientResults.name} </strong>alapanyag
@@ -78,7 +80,7 @@
 	</section>
 	<section class="mt-5">
 		<div class="container" id="bigbox">
-			<a href="listrecipes" class="next" integrity="">Összes recept<br></a>
+			<a id="listrecipes" href="listrecipes" class="next" integrity="">Összes recept<br></a>
 			<a name="search"></a> <br> <br>
 			<h2 class="text-left display-5 mx-1">Receptböngésző</h2>
 			<hr>
@@ -88,10 +90,10 @@
 					<div class="p-3 md-form mt-0">
 						<form action="/search" method="post"
 							class="form-group text-center py-2 rounded" id="search">
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_details" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..."
 								aria-label="Search">
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton1" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
@@ -101,15 +103,15 @@
 						<form action="/searchingredients" method="post"
 							class="form-group text-center py-2 rounded"
 							id="searchIngredients">
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_ingred" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz összetevők szerint..." aria-label="Search">
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton2" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
 
 						</form>
-						<a href="search">Találatok ürítése</a>
+						<a id="empty" href="search">Találatok ürítése</a>
 					</div>
 
 				</div>
