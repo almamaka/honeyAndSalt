@@ -7,4 +7,11 @@ public class MainPage extends BasePage{
 	public MainPage(WebDriver driver) {
 		super(driver);
 	}
+	
+	protected String url = baseUrl + "/mainpage";
+	
+	public MainPage goTo() {
+		driver.get(url);
+		return this;
+	}
 }

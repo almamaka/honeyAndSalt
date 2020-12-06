@@ -62,7 +62,7 @@
 	<section class="mt-5">
 		<div class="container" id="resultbox">
 			<br>
-			<h2 class="text-left display-5 mx-1">Keresés eredménye</h2>
+			<h3 class="text-left display-5 mx-1">Keresés eredménye</h3>
 			<hr>
 			<div class="row">
 				<c:forEach var="searchResults" items="${search}">
@@ -88,7 +88,7 @@
 	</section>
 	<section class="mt-5">
 		<div class="container" id="bigbox">
-			<a href="listrecipes" class="next" integrity="">Összes recept<br></a>
+			<a id="listrecipes" href="listrecipes" class="next" integrity="">Összes recept<br></a>
 			<a name="search"></a> <br> <br>
 			<h2 class="text-left display-5 mx-1">Receptböngésző</h2>
 			<hr>
@@ -98,10 +98,10 @@
 					<div class="p-3 md-form mt-0">
 						<form action="/search" method="post"
 							class="form-group text-center py-2 rounded" id="search">
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_details" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..."
 								aria-label="Search"> <br>
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton1" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
@@ -111,16 +111,16 @@
 						<form action="/searchingredients" method="post"
 							class="form-group text-center py-2 rounded"
 							id="searchIngredients">
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_ingred" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz összetevők szerint..." aria-label="Search">
 							<br>
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton2" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
 
 						</form>
-						<a class="next" href="search">Találatok ürítése</a>
+						<a id="empty" href="search">Találatok ürítése</a>
 					</div>
 
 				</div>

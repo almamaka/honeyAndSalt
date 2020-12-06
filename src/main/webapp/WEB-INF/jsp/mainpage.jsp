@@ -83,10 +83,10 @@
 								leírás szövegében! Egyszerre csak egy szóra keress!</p>
 							<p>Ha diétád alapján keresnél, keress rá az adott alapanyag
 								mentességre! Például: gluténmentes, laktózmentes, stb.</p>
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_details" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz elkészítési leírás vagy a recept neve alapján..."
 								aria-label="Search"> <br>
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton1" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
@@ -98,15 +98,15 @@
 							id="searchIngredients">
 							<p>Keress receptekre az összetevőik alapján! Egyszerre csak
 								egy alapanyagra tudsz keresni.</p>
-							<input class="form-control" type="text" name="searchText"
+							<input id="search_ingred" class="form-control" type="text" name="searchText"
 								placeholder="Böngéssz összetevők szerint..." aria-label="Search">
 							<br>
-							<button type="submit" name="search" class="btn btn-dark" id="btn"
+							<button id="searchbutton2" type="submit" name="search" class="btn btn-dark" id="btn"
 								integrity="">Keresés</button>
 							<input type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
 						</form>
-						<a href="listrecipes" class="next" integrity="">Nézd meg az
+						<a id="listrecipes" href="listrecipes" class="next" integrity="">Nézd meg az
 							összes receptet!<br>
 						</a>
 					</div>

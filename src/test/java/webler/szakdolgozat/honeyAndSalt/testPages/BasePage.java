@@ -69,4 +69,17 @@ public class BasePage {
 		WebElement textfield = waitForElementToBeClickable(selector);
 		textfield.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 	}
+	
+	boolean waitForInvisibilityOfElement(By selector) {
+		WebDriverWait wait = new WebDriverWait(driver, 5000);
+		return wait.until(ExpectedConditions.invisibilityOfElementLocated(selector));
+	}
+	
+	boolean elementIsVisible(By selector) {
+		return waitFindElement(selector).isDisplayed();
+	}
+	
+	boolean elementIsNotVisible(By selector) {
+		return waitForInvisibilityOfElement(selector);
+	}
 }

@@ -31,5 +31,10 @@ public class LoginPage extends BasePage {
 		waitAndClick(registrationButton);
 	}
 	
+	public boolean assertLogoutSuccesTextIsVisible() {
+		By logoutSuccessText = By.id("logout_success");
+		return elementIsVisible(logoutSuccessText);
+	}
+	
 	
 }

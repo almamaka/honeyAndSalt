@@ -5,7 +5,7 @@
     <classes>
       <class name="webler.szakdolgozat.honeyAndSalt.UseCaseTest">
         <methods>
-          <include name="registrationTest"/>
+          <include name="mainPageTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- webler.szakdolgozat.honeyAndSalt.UseCaseTest -->

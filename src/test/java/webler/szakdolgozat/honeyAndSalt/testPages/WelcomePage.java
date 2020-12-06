@@ -24,4 +24,9 @@ public class WelcomePage extends BasePage{
 	public void clickOnLogoutButton() {
 		waitAndClick(welcomeLogoutButton);
 	}
+
+	public boolean assertWelcomeTextIsDisplayed() {
+		By welcomeText = By.xpath("//h3[contains(text(),'Üdvözöllek')]");
+		return elementIsVisible(welcomeText);
+	}
 }
