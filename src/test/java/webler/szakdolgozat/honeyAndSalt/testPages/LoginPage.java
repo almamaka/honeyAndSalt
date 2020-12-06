@@ -14,6 +14,7 @@ public class LoginPage extends BasePage {
 	private By usernameField = By.id("username");
 	private By passwordField = By.id("pwd");
 	private By loginButton = By.id("btn");
+	private By registrationButton = By.className("next");
 	
 	public LoginPage goTo() {
 		driver.get(url);
@@ -21,9 +22,13 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void signIn(String user, String password) {
-		type(usernameField, user);
-		type(passwordField, password);
-		click(loginButton);
+		waitAndType(usernameField, user);
+		waitAndType(passwordField, password);
+		waitAndClick(loginButton);
+	}
+	
+	public void clickOnRegistrationButton() {
+		waitAndClick(registrationButton);
 	}
 	
 	

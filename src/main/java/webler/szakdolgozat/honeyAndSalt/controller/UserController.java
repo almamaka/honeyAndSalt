@@ -50,7 +50,7 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping({"/welcome"})
+    @GetMapping("/welcome")
     public String welcome(Model model) {
         return "welcome";
     }
