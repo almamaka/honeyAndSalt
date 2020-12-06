@@ -31,6 +31,14 @@ public class UseCaseTest extends BaseTest {
 		} else {
 			System.out.println("Sikertelen assert");
 		}
+		navpage.clickOnUserdataButton();
+		Assert.assertTrue(navpage.assertTextIsvisibleOnPage("Felhasználói adatok"));
+		if (navpage.assertTextIsvisibleOnPage("Felhasználói adatok") == true) {
+			System.out.println("Sikeres assert");
+		} else {
+			System.out.println("Sikertelen assert");
+		}
+		navpage.clickOnMainPageButton();
 		navpage.clickOnLogoutButton();
 		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
 		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {
@@ -109,7 +117,6 @@ public class UseCaseTest extends BaseTest {
 		} else {
 			System.out.println("Sikertelen assert");
 		}
-		listrecipepage.clickOnDeleteButton();
 		navpage.clickOnLogoutButton();
 		Assert.assertTrue(loginpage.assertLogoutSuccesTextIsVisible());
 		if (loginpage.assertLogoutSuccesTextIsVisible() == true) {

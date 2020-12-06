@@ -39,10 +39,8 @@ public class BaseTest {
 		driver.manage().window().maximize();
 	}
 	
-	
-	
-//	@AfterMethod(alwaysRun = true)
-//	protected void tearDown() {
-//		driver.close();
-//	}
+	@AfterMethod(alwaysRun = true)
+	protected void tearDown() {
+		driver.close();
+	}
 }
