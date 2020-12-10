@@ -11,7 +11,6 @@ import webler.szakdolgozat.honeyAndSalt.entity.Recipe;
 import webler.szakdolgozat.honeyAndSalt.entity.Role;
 import webler.szakdolgozat.honeyAndSalt.entity.User;
 import webler.szakdolgozat.honeyAndSalt.repository.HoneyAndSaltRepository;
-import webler.szakdolgozat.honeyAndSalt.repository.RoleRepository;
 import webler.szakdolgozat.honeyAndSalt.repository.UserRepository;
 
 @Component
