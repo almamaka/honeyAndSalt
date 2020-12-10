@@ -189,5 +189,246 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		r3.getIngredients().add(r3i5);
 
 		honeyrepo.save(r3);
+		
+		
+		Recipe r4 = new Recipe();
+		r4.setName("NUTELLA®-val töltött churros");
+		r4.setPrepTime(45);
+		r4.setCookTime(15);
+		r4.setInstructions("<p>A vizet és a vajat egy csipet sóval egy lábasba tesszük, felforraljuk, majd beleszórjuk a lisztet, és folyamatosan kevergetve 4-5 percig pirítjuk, amíg a tészta elválik az edény falától. Melós a dolog, de meg kell csinálni. Ezután a tésztát kiborítjuk egy vágódeszkára, és kicsit szétterítjük, hogy hamar kihűljön. \r\n" + 
+				"\r\n" + 
+				"A tésztát visszatesszük az edénybe, és először az egyik tojást dolgozzuk bele, majd a másikat is. A kész tésztát egy csillagcsöves habzsákba töltjük, majd 170 fokra melegített olajba 8-10 cm hosszú rudakat nyomunk belőle úgy, hogy a végét ollóval vágjuk el. Pár perc alatt aranybarnára sütjük (egyszerre mindig csak 4-5 darabot, nehogy összetapadjanak), majd törlőpapírra szedjük őket. \r\n" + 
+				"\r\n" + 
+				"A NUTELLA®-t belekanalazzuk egy másik habzsákba, aminek a végét éppen csak milliméteresre vágjuk. A még meleg churrosokat egy hurkapálcával csak az egyik oldalukon kilyukasztjuk, majd a mélyedést a hurkapálcát mozgatva kicsit kitágítjuk, és beletöltjük a NUTELLA®-t a habzsákból.</p> <div id='forras'>~ forrás: streetkitchen.hu</div>");
+		r4.setImg("img/nutella.jpg");
+		
+		Ingredients r4i = new Ingredients();
+		r4i.setName("250 ml víz");
+		r4i.setRecipe(r4);
+		
+		Ingredients r4i2 = new Ingredients();
+		r4i2.setName("100 g vaj");
+		r4i2.setRecipe(r4);
+		
+		Ingredients r4i3 = new Ingredients();
+		r4i3.setName("csipt só");
+		r4i3.setRecipe(r4);
+		
+		Ingredients r4i4 = new Ingredients();
+		r4i4.setName("140 g liszt");
+		r4i4.setRecipe(r4);
+		
+		Ingredients r4i5 = new Ingredients();
+		r4i5.setName("60 g Nutella");
+		r4i5.setRecipe(r4);
+		
+		Ingredients r4i6 = new Ingredients();
+		r4i6.setName("2 tojás");
+		r4i6.setRecipe(r4);
+		
+		Ingredients r4i7 = new Ingredients();
+		r4i7.setName("olaj");
+		r4i7.setRecipe(r4);
+		
+		r4.getIngredients().add(r4i);
+		r4.getIngredients().add(r4i2);
+		r4.getIngredients().add(r4i3);
+		r4.getIngredients().add(r4i4);
+		r4.getIngredients().add(r4i5);
+		r4.getIngredients().add(r4i6);
+		r4.getIngredients().add(r4i7);
+		
+		honeyrepo.save(r4);
+		
+		Recipe r5 = new Recipe();
+		r5.setName("Zöld pestos-húsos tortellini");
+		r5.setPrepTime(15);
+		r5.setCookTime(15);
+		r5.setInstructions("<p>A zöld pesztós-húsos tortellini a tészta elkészítésével kezdődik. A tortellinit lobogó, forró vízben kifőzzük. Ez mindössze egy perc. Ne főzzük túl, mert könnyen kilyukadhat, és kiesik belőle a töltelék.\r\n" + 
+				"\r\n" + 
+				"Egy serpenyőben elkeverjük a pesztót és a tejszínt, hozzáadjuk a zúzott fokhagymát, és az egészet összeforraljuk. A végén beledobjuk a vajat, és ha szükséges, megsózzuk. Amikor a mártás elkészült, belekeverjük a tortellinit, és már tálalhatjuk is. Tálalásnál meglocsoljuk egy kevés olívaolajjal, a tetejét pár levél friss bazsalikommal díszítjük, és ráreszeljük a trappistát.</p> <div id='forras'>~ forrás: streetkitchen.hu</div>");
+		r5.setImg("img/tortellini.jpg");
+		
+		Ingredients r5i = new Ingredients();
+		r5i.setName("500 g tortellini");
+		r5i.setRecipe(r5);
+		
+		Ingredients r5i2 = new Ingredients();
+		r5i2.setName("200 g pesto");
+		r5i2.setRecipe(r5);
+		
+		Ingredients r5i3 = new Ingredients();
+		r5i3.setName("300 ml tejszín");
+		r5i3.setRecipe(r5);
+		
+		Ingredients r5i4 = new Ingredients();
+		r5i4.setName("2 gerezd fokhagyma");
+		r5i4.setRecipe(r5);
+		
+		Ingredients r5i5 = new Ingredients();
+		r5i5.setName("1 kanál vaj");
+		r5i5.setRecipe(r5);
+		
+		Ingredients r5i6 = new Ingredients();
+		r5i6.setName("só");
+		r5i6.setRecipe(r5);
+		
+		Ingredients r5i7 = new Ingredients();
+		r5i7.setName("olaj");
+		r5i7.setRecipe(r5);
+		
+		Ingredients r5i8 = new Ingredients();
+		r5i8.setName("100 g trappista");
+		r5i8.setRecipe(r5);
+		
+		Ingredients r5i9 = new Ingredients();
+		r5i9.setName("bazsalikom");
+		r5i9.setRecipe(r5);
+		
+		r5.getIngredients().add(r5i);
+		r5.getIngredients().add(r5i2);
+		r5.getIngredients().add(r5i3);
+		r5.getIngredients().add(r5i4);
+		r5.getIngredients().add(r5i5);
+		r5.getIngredients().add(r5i6);
+		r5.getIngredients().add(r5i7);
+		r5.getIngredients().add(r5i8);
+		r5.getIngredients().add(r5i9);
+		
+		honeyrepo.save(r5);
+		
+		Recipe r6 = new Recipe();
+		r6.setName("Tarjás.parajos serpenyős krumpli");
+		r6.setPrepTime(20);
+		r6.setCookTime(40);
+		r6.setInstructions("<p>A tarját felkockázzuk, a hagymát és a fokhagymát felszeleteljük, és az egészet megpirítjuk egy kis olajon a serpenyőben.\r\n" + 
+				"\r\n" + 
+				"Felöntjük a tejszínnel és az alaplével, beletesszük a parajt, és egybeforraljuk. Ízesítjük a szerecsendióval, sóval, borssal, belereszelünk 60 grammnyi sajtot, majd belekeverjük a meghámozott, felszeletelt nyers krumplit. Lefedjük alufóliával, és 185 fokra előmelegített sütőbe toljuk 15-20 percre.\r\n" + 
+				"\r\n" + 
+				"Ezután levesszük róla a fóliát, és a tetejére reszeljük a maradék sajtot, majd fólia nélkül további 15-20 percig sütjük.\r\n" + 
+				"\r\n" + 
+				"Kis tejföllel tálalva az igazi.</p> <div id='forras'>~ forrás: streetkitchen.hu</div>");
+		r6.setImg("img/krumpli.jpg");
+		
+		Ingredients r6i = new Ingredients();
+		r6i.setName("250 g főtt tarja");
+		r6i.setRecipe(r6);
+		
+		Ingredients r6i2 = new Ingredients();
+		r6i2.setName("2 hagyma");
+		r6i2.setRecipe(r6);
+		
+		Ingredients r6i3 = new Ingredients();
+		r6i3.setName("180 ml tejszín");
+		r6i3.setRecipe(r6);
+		
+		Ingredients r6i4 = new Ingredients();
+		r6i4.setName("4 gerezd fokhagyma");
+		r6i4.setRecipe(r6);
+		
+		Ingredients r6i5 = new Ingredients();
+		r6i5.setName("1 csipet szerecsendió");
+		r6i5.setRecipe(r6);
+		
+		Ingredients r6i6 = new Ingredients();
+		r6i6.setName("só");
+		r6i6.setRecipe(r6);
+		
+		Ingredients r6i7 = new Ingredients();
+		r6i7.setName("olaj");
+		r6i7.setRecipe(r6);
+		
+		Ingredients r6i8 = new Ingredients();
+		r6i8.setName("200 g paraj");
+		r6i8.setRecipe(r6);
+		
+		Ingredients r6i9 = new Ingredients();
+		r6i9.setName("200 ml alaplé");
+		r6i9.setRecipe(r6);
+		
+		Ingredients r6i10 = new Ingredients();
+		r6i10.setName("100 g trappista");
+		r6i10.setRecipe(r6);
+		
+		Ingredients r6i11 = new Ingredients();
+		r6i11.setName("bors");
+		r6i11.setRecipe(r6);
+		
+		Ingredients r6i12 = new Ingredients();
+		r6i12.setName("700 g krumpli");
+		r6i12.setRecipe(r6);
+		
+		Ingredients r6i13 = new Ingredients();
+		r6i13.setName("tejföl");
+		r6i13.setRecipe(r6);
+		
+		r6.getIngredients().add(r6i);
+		r6.getIngredients().add(r6i2);
+		r6.getIngredients().add(r6i3);
+		r6.getIngredients().add(r6i4);
+		r6.getIngredients().add(r6i5);
+		r6.getIngredients().add(r6i6);
+		r6.getIngredients().add(r6i7);
+		r6.getIngredients().add(r6i8);
+		r6.getIngredients().add(r6i9);
+		
+		honeyrepo.save(r6);
+		
+		Recipe r7 = new Recipe();
+		r7.setName("Csokis muffin glutén- és laktóz nélkül");
+		r7.setPrepTime(25);
+		r7.setCookTime(25);
+		r7.setInstructions("<p>A tészta hozzávalóit alaposan összekeverjük a vaníliarúd kikapart magjaival, majd muffinkapszlikkal bélelt muffinsütő formában 12-felé osztjuk. 175 fokra előmelegített sütőbe toljuk őket kb. 25 percre, majd hagyjuk kihűlni. \r\n" + 
+				"\r\n" + 
+				"Közben a krém hozzávalóit összemelegítjük, majd hűtőbe dobjuk, és ha hidegre hűlt (de ne várjuk meg, amíg szilárdra hűl), egy robotgéppel kihabosítjuk, és csillagcsöves nyomózsákból a muffinok tetejére nyomjuk. Reszelt csokival és pár szem mandulával díszíthetjük a tetejüket.</p> <div id='forras'>~ forrás: streetkitchen.hu</div>");
+		r7.setImg("img/muffin.jpg");
+		
+		Ingredients r7i = new Ingredients();
+		r7i.setName("75 g kakaópor");
+		r7i.setRecipe(r7);
+		
+		Ingredients r7i2 = new Ingredients();
+		r7i2.setName("80 g mandulaliszt");
+		r7i2.setRecipe(r7);
+		
+		Ingredients r7i3 = new Ingredients();
+		r7i3.setName("100 ml juharszirup");
+		r7i3.setRecipe(r7);
+		
+		Ingredients r7i4 = new Ingredients();
+		r7i4.setName("125 g almaszósz");
+		r7i4.setRecipe(r7);
+		
+		Ingredients r7i5 = new Ingredients();
+		r7i5.setName("125 ml kókuszolaj");
+		r7i5.setRecipe(r7);
+		
+		Ingredients r7i6 = new Ingredients();
+		r7i6.setName("4 tojás");
+		r7i6.setRecipe(r7);
+		
+		Ingredients r7i7 = new Ingredients();
+		r7i7.setName("10 g sütőpor");
+		r7i7.setRecipe(r7);
+		
+		Ingredients r7i8 = new Ingredients();
+		r7i8.setName("csipet só");
+		r7i8.setRecipe(r7);
+		
+		Ingredients r7i9 = new Ingredients();
+		r7i9.setName("0,5 vaniliarúd");
+		r7i9.setRecipe(r7);
+		
+		r7.getIngredients().add(r7i);
+		r7.getIngredients().add(r7i2);
+		r7.getIngredients().add(r7i3);
+		r7.getIngredients().add(r7i4);
+		r7.getIngredients().add(r7i5);
+		r7.getIngredients().add(r7i6);
+		r7.getIngredients().add(r7i7);
+		r7.getIngredients().add(r7i8);
+		r7.getIngredients().add(r7i9);
+		
+		honeyrepo.save(r7);
 	}
 }
