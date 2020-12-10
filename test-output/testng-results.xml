@@ -2,68 +2,68 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="76180" started-at="2020-12-06T17:13:22 CET" finished-at="2020-12-06T17:14:39 CET">
+  <suite name="Default suite" duration-ms="75805" started-at="2020-12-10T18:47:23 CET" finished-at="2020-12-10T18:48:39 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="76180" started-at="2020-12-06T17:13:22 CET" finished-at="2020-12-06T17:14:39 CET">
+    <test name="Default test" duration-ms="75805" started-at="2020-12-10T18:47:23 CET" finished-at="2020-12-10T18:48:39 CET">
       <class name="webler.szakdolgozat.honeyAndSalt.UseCaseTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5824" started-at="2020-12-06T17:13:22 CET" finished-at="2020-12-06T17:13:28 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5835" started-at="2020-12-10T18:47:23 CET" finished-at="2020-12-10T18:47:29 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="editRecipeTestAdmin()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="editRecipeTestAdmin" duration-ms="10224" started-at="2020-12-06T17:13:28 CET" finished-at="2020-12-06T17:13:38 CET">
+        <test-method status="PASS" signature="editRecipeTestAdmin()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="editRecipeTestAdmin" duration-ms="10134" started-at="2020-12-10T18:47:29 CET" finished-at="2020-12-10T18:47:39 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editRecipeTestAdmin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="39" started-at="2020-12-06T17:13:38 CET" finished-at="2020-12-06T17:13:39 CET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="37" started-at="2020-12-10T18:47:39 CET" finished-at="2020-12-10T18:47:39 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5137" started-at="2020-12-06T17:13:39 CET" finished-at="2020-12-06T17:13:44 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5133" started-at="2020-12-10T18:47:39 CET" finished-at="2020-12-10T18:47:44 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="favouriteTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="favouriteTest" duration-ms="10278" started-at="2020-12-06T17:13:44 CET" finished-at="2020-12-06T17:13:54 CET">
+        <test-method status="PASS" signature="favouriteTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="favouriteTest" duration-ms="10240" started-at="2020-12-10T18:47:44 CET" finished-at="2020-12-10T18:47:54 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- favouriteTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="37" started-at="2020-12-06T17:13:54 CET" finished-at="2020-12-06T17:13:54 CET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="30" started-at="2020-12-10T18:47:54 CET" finished-at="2020-12-10T18:47:54 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5186" started-at="2020-12-06T17:13:54 CET" finished-at="2020-12-06T17:13:59 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5136" started-at="2020-12-10T18:47:54 CET" finished-at="2020-12-10T18:48:00 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registrationTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="registrationTest" duration-ms="8542" started-at="2020-12-06T17:13:59 CET" finished-at="2020-12-06T17:14:08 CET">
+        <test-method status="PASS" signature="registrationTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="registrationTest" duration-ms="8491" started-at="2020-12-10T18:48:00 CET" finished-at="2020-12-10T18:48:08 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="35" started-at="2020-12-06T17:14:08 CET" finished-at="2020-12-06T17:14:08 CET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="34" started-at="2020-12-10T18:48:08 CET" finished-at="2020-12-10T18:48:08 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5187" started-at="2020-12-06T17:14:08 CET" finished-at="2020-12-06T17:14:13 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5127" started-at="2020-12-10T18:48:08 CET" finished-at="2020-12-10T18:48:13 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="searchTest" duration-ms="11340" started-at="2020-12-06T17:14:13 CET" finished-at="2020-12-06T17:14:24 CET">
+        <test-method status="PASS" signature="searchTest()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="searchTest" duration-ms="11361" started-at="2020-12-10T18:48:13 CET" finished-at="2020-12-10T18:48:25 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="35" started-at="2020-12-06T17:14:24 CET" finished-at="2020-12-06T17:14:24 CET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="32" started-at="2020-12-10T18:48:25 CET" finished-at="2020-12-10T18:48:25 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5193" started-at="2020-12-06T17:14:24 CET" finished-at="2020-12-06T17:14:29 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="setUp" is-config="true" duration-ms="5139" started-at="2020-12-10T18:48:25 CET" finished-at="2020-12-10T18:48:30 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tryEveryNavigationElement()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tryEveryNavigationElement" duration-ms="9048" started-at="2020-12-06T17:14:29 CET" finished-at="2020-12-06T17:14:39 CET">
+        <test-method status="PASS" signature="tryEveryNavigationElement()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tryEveryNavigationElement" duration-ms="9008" started-at="2020-12-10T18:48:30 CET" finished-at="2020-12-10T18:48:39 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tryEveryNavigationElement -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="34" started-at="2020-12-06T17:14:39 CET" finished-at="2020-12-06T17:14:39 CET">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webler.szakdolgozat.honeyAndSalt.UseCaseTest@396e2f39]" name="tearDown" is-config="true" duration-ms="30" started-at="2020-12-10T18:48:39 CET" finished-at="2020-12-10T18:48:39 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
